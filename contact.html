@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | సంప్రదించండి | శ్రీ ఇంద్రగంటి శ్రీనివాస శర్మ గారు</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        :root {
+            --bg-color: #fff8e1; /* Light cream */
+            --text-color: #5d4037; /* Dark brown */
+            --heading-color: #e65100; /* Saffron orange */
+            --accent-color: #c62828; /* Red */
+            --gold: #ffb300; /* Temple gold */
+            --light-gold: #ffecb3;
+            --temple-red: #b71c1c;
+            --vibrant-orange: #ff6f00;
+            --vibrant-yellow: #ffca28;
+            --vibrant-red: #d32f2f;
+            --vibrant-green: #388e3c;
+            --vibrant-blue: #1976d2;
+            --vibrant-purple: #7b1fa2;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', 'Noto Sans Telugu', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles - Matching Home Page */
+        header {
+            background: linear-gradient(135deg, var(--vibrant-orange), var(--vibrant-red));
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+            animation: headerSlideDown 0.8s ease-out;
+        }
+        
+        @keyframes headerSlideDown {
+            0% { transform: translateY(-100%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            margin-left: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin-left: 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--vibrant-yellow);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::before {
+            width: 100%;
+        }
+        
+        nav a:hover {
+            color: var(--vibrant-yellow);
+        }
+        
+        .nav-active {
+            color: var(--vibrant-yellow);
+            position: relative;
+        }
+        
+        .nav-active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--vibrant-yellow);
+        }
+        
+        .language-toggle {
+            margin-left: 20px;
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .language-toggle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .language-toggle:hover::before {
+            left: 100%;
+        }
+        
+        .language-toggle:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        /* Hero Section - Matching Home Page */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('BG-IMG2.jpeg') center/cover;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: heroFadeIn 1.2s ease-out;
+        }
+        
+        @keyframes heroFadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: contentSlideUp 1s ease-out 0.5s both;
+        }
+        
+        @keyframes contentSlideUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--vibrant-yellow);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            animation: textGlow 3s infinite alternate;
+        }
+        
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 5px rgba(255, 202, 40, 0.5); }
+            100% { text-shadow: 0 0 20px rgba(255, 202, 40, 0.8), 0 0 30px rgba(255, 202, 40, 0.6); }
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--vibrant-red), var(--vibrant-orange));
+            color: white;
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            margin: 0.5rem;
+            position: relative;
+            overflow: hidden;
+            animation: buttonPulse 2s infinite;
+        }
+        
+        @keyframes buttonPulse {
+            0% { box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+            50% { box-shadow: 0 4px 20px rgba(230, 81, 0, 0.6); }
+            100% { box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--bg-color), #fff5e6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--vibrant-orange);
+            position: relative;
+            font-size: 2.2rem;
+            animation: titleFadeIn 1s ease-out;
+        }
+        
+        @keyframes titleFadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--vibrant-red), var(--vibrant-yellow));
+            margin: 15px auto;
+            border-radius: 2px;
+            animation: lineExtend 1s ease-out 0.5s both;
+        }
+        
+        @keyframes lineExtend {
+            0% { width: 0; }
+            100% { width: 100px; }
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            animation: fadeInLeft 1s ease-out;
+        }
+        
+        @keyframes fadeInLeft {
+            0% { transform: translateX(-50px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+        
+        .contact-form-container {
+            flex: 1;
+            min-width: 300px;
+            animation: fadeInRight 1s ease-out;
+        }
+        
+        @keyframes fadeInRight {
+            0% { transform: translateX(50px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+        
+        /* Contact Cards - Updated with Home Page Styles */
+        .contact-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s;
+            position: relative;
+            border-top: 4px solid var(--vibrant-yellow);
+            animation: cardFadeIn 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .contact-card:nth-child(1) { animation-delay: 0.1s; }
+        .contact-card:nth-child(2) { animation-delay: 0.2s; }
+        .contact-card:nth-child(3) { animation-delay: 0.3s; }
+        
+        @keyframes cardFadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,179,0,0.05), rgba(230,81,0,0.05));
+            z-index: 1;
+        }
+        
+        .contact-card h3 {
+            color: var(--vibrant-orange);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-card h3 i {
+            color: var(--vibrant-yellow);
+            animation: iconBounce 2s infinite;
+        }
+        
+        @keyframes iconBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--light-gold), var(--vibrant-yellow));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            color: var(--heading-color);
+            font-size: 1.2rem;
+            animation: avatarPulse 3s infinite;
+        }
+        
+        @keyframes avatarPulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 179, 0, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 179, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 179, 0, 0); }
+        }
+        
+        .contact-details h4 {
+            color: var(--vibrant-orange);
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+        }
+        
+        .contact-details p {
+            color: var(--text-color);
+            margin-bottom: 0.2rem;
+        }
+        
+        .contact-link {
+            color: var(--vibrant-red);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-link:hover {
+            color: var(--temple-red);
+        }
+        
+        /* Quick Connect Section - Updated with Home Page Styles */
+        .quick-connect {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, white, #fff5e6);
+            position: relative;
+            overflow: hidden;
+            
+        }
+        
+        .connect-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+            margin-left: 6%;
+            
+         
+        }
+        
+        .connect-card {
+            background-color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.4s;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-top: 4px solid var(--vibrant-yellow);
+            animation: cardFadeIn 0.8s ease-out;
+            animation-fill-mode: both;
+            position: relative;
+            overflow: hidden;
+            ;
+            
+        }
+        
+        .connect-card:nth-child(1) { animation-delay: 0.1s; }
+        .connect-card:nth-child(2) { animation-delay: 0.2s; }
+        .connect-card:nth-child(3) { animation-delay: 0.3s; }
+        
+        .connect-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,179,0,0.05), rgba(230,81,0,0.05));
+            z-index: 1;
+        }
+        
+        .connect-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            color: var(--text-color);
+        }
+        
+        .connect-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--vibrant-orange);
+            position: relative;
+            z-index: 2;
+            animation: iconBounce 2s infinite;
+        }
+        
+        .connect-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--vibrant-orange);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .connect-card p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .connect-number {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--vibrant-red);
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* WhatsApp Submit Button */
+        .whatsapp-submit-button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: buttonPulse 2s infinite;
+        }
+        
+        .whatsapp-submit-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .whatsapp-submit-button:hover::before {
+            left: 100%;
+        }
+        
+        .whatsapp-submit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* Availability Section */
+        .availability-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #fff5e6, var(--bg-color));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .availability-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            border-left: 5px solid var(--vibrant-yellow);
+            animation: cardFadeIn 0.8s ease-out 0.2s both;
+        }
+        
+        .availability-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            animation: featureFadeIn 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .feature-item:nth-child(1) { animation-delay: 0.3s; }
+        .feature-item:nth-child(2) { animation-delay: 0.4s; }
+        .feature-item:nth-child(3) { animation-delay: 0.5s; }
+        
+        @keyframes featureFadeIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--light-gold), var(--vibrant-yellow));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--vibrant-orange);
+            animation: iconBounce 2s infinite;
+        }
+        
+        .feature-text {
+            text-align: center;
+        }
+        
+        .feature-text h4 {
+            color: var(--vibrant-orange);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Map Section */
+        .map-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, white, #fff5e6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: 400px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Contact Form */
+        .form-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--vibrant-yellow);
+            animation: cardFadeIn 0.8s ease-out 0.3s both;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .form-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,179,0,0.03), rgba(230,81,0,0.03));
+            z-index: 1;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--vibrant-orange);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            font-family: 'Poppins', 'Noto Sans Telugu', sans-serif;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--vibrant-yellow);
+            box-shadow: 0 0 0 3px rgba(255, 202, 40, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Form Validation Styles */
+        .form-control.error {
+            border-color: var(--vibrant-red);
+        }
+        
+        .error-message {
+            color: var(--vibrant-red);
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: none;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        /* Alert Messages */
+        .alert {
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+            animation: fadeIn 0.3s ease-out;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .alert.show {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Language toggle */
+        .lang-en {
+            display: block;
+        }
+        
+        .lang-te {
+            display: none;
+        }
+        
+        body.telugu .lang-en {
+            display: none;
+        }
+        
+        body.telugu .lang-te {
+            display: block;
+        }
+        
+        /* Form label visibility control */
+        .form-group label.lang-en {
+            display: block;
+        }
+        
+        .form-group label.lang-te {
+            display: none;
+        }
+        
+        body.telugu .form-group label.lang-en {
+            display: none;
+        }
+        
+        body.telugu .form-group label.lang-te {
+            display: block;
+        }
+        
+        /* Placeholder styling */
+        .form-control::placeholder {
+            color: #666;
+        }
+        
+        /* Loading Spinner */
+        .spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .whatsapp-submit-button.loading .spinner {
+            display: inline-block;
+        }
+        
+        .whatsapp-submit-button.loading span:not(.spinner) {
+            opacity: 0.7;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--text-color), #3e2723);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-section h3 {
+            color: var(--vibrant-yellow);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .contact-info-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact-item-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        /* UPDATED: Quick Links Hover Effects */
+        .footer-section p a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-section p a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 202, 40, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .footer-section p a:hover::before {
+            left: 100%;
+        }
+        
+        .footer-section p a:hover {
+            color: var(--vibrant-yellow);
+            transform: translateX(5px);
+            background-color: rgba(255, 202, 40, 0.1);
+        }
+        
+        .copyright {
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* WhatsApp Button - Matching Home Page */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            text-decoration: none;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: all 0.3s;
+            animation: pulse 2s infinite, bounce 3s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        
+        /* Call Button - Matching Home Page */
+        .call-float {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            text-decoration: none;
+            background: linear-gradient(135deg, var(--vibrant-green), #2E7D32);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: all 0.3s;
+            animation: pulse 2s infinite, bounce 3s infinite 1s;
+        }
+        
+        .call-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav li {
+                margin: 0.5rem;
+            }
+            
+            .hero {
+                min-height: 50vh;
+                padding: 3rem 1rem;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .connect-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .availability-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-card {
+                padding: 2rem;
+            }
+            
+            .map-container {
+                height: 300px;
+            }
+            
+            .cta-button {
+                display: block;
+                margin: 1rem auto;
+                width: 80%;
+                max-width: 250px;
+            }
+        }
+        
+        /* Temple decorative elements */
+        .temple-border {
+            height: 10px;
+            background: linear-gradient(to right, var(--vibrant-yellow), var(--vibrant-orange), var(--vibrant-red), var(--vibrant-orange), var(--vibrant-yellow));
+            margin: 2rem 0;
+            animation: borderFlow 3s infinite linear;
+            background-size: 200% 100%;
+        }
+        
+        @keyframes borderFlow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Keep the HTML body content exactly as you have it -->
+    <!-- The rest of your HTML remains unchanged -->
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon">🛕</div>
+                <h1 class="lang-en">Pandit Services</h1>
+                <h1 class="lang-te">పండిత్ సేవలు</h1>
+            </div>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">
+                        <span class="lang-en">Home</span>
+                        <span class="lang-te">హోమ్</span>
+                    </a></li>
+                    <li><a href="services.html">
+                        <span class="lang-en">Services</span>
+                        <span class="lang-te">సేవలు</span>
+                    </a></li>
+                    <li><a href="about.html">
+                        <span class="lang-en">About</span>
+                        <span class="lang-te">గురించి</span>
+                    </a></li>
+                    <li><a href="contact.html" class="nav-active">
+                        <span class="lang-en">Contact</span>
+                        <span class="lang-te">సంప్రదించండి</span>
+                    </a></li>
+                </ul>
+            </nav>
+            
+            <button class="language-toggle" id="languageToggle">
+                <span class="lang-en">తెలుగు</span>
+                <span class="lang-te">English</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="lang-en">Contact Us</h2>
+            <h2 class="lang-te">మమ్మల్ని సంప్రదించండి</h2>
+            
+            <p class="lang-en">Get in Touch for Traditional Vedic Rituals & Ceremonies</p>
+            <p class="lang-te">సంప్రదాయ వేదిక ఆచారాలు & వేడుకల కోసం సంప్రదించండి</p>
+            
+            <p class="lang-en">Available 24/7 for consultations and emergency rituals</p>
+            <p class="lang-te">సంప్రదింపులు మరియు అత్యవసర ఆచారాల కోసం 24/7 అందుబాటులో</p>
+        </div>
+    </section>
+
+    <!-- Quick Connect Section -->
+    <section class="quick-connect">
+        <div class="container">
+            <h2 class="section-title lang-en">Quick Connect</h2>
+            <h2 class="section-title lang-te">త్వరిత సంప్రదింపు</h2>
+            
+            <div class="connect-grid">
+                <a href="tel:9848315831" class="connect-card">
+                    <div class="connect-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="lang-en">Call Now</h3>
+                    <h3 class="lang-te">ఇప్పుడే కాల్ చేయండి</h3>
+                    <p class="connect-number">98483 15831</p>
+                    <p class="lang-en">Available 24/7</p>
+                    <p class="lang-te">24/7 అందుబాటులో</p>
+                </a>
+                
+                <a href="#" id="quickWhatsApp" class="connect-card">
+                    <div class="connect-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3 class="lang-en">WhatsApp</h3>
+                    <h3 class="lang-te">వాట్సాప్</h3>
+                    <p class="connect-number">86391 68617</p>
+                    <p class="lang-en">Send Message Directly</p>
+                    <p class="lang-te">నేరుగా సందేశం పంపండి</p>
+                </a>
+                
+                <a href="#location" class="connect-card">
+                    <div class="connect-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="lang-en">Location</h3>
+                    <h3 class="lang-te">స్థానం</h3>
+                    <p class="lang-en">Visakhapatnam</p>
+                    <p class="lang-te">విశాఖపట్నం</p>
+                    <p class="lang-en">Andhra Pradesh</p>
+                    <p class="lang-te">ఆంధ్రప్రదేశ్</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="temple-border"></div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2 class="section-title lang-en">Contact Information</h2>
+                    <h2 class="section-title lang-te">సంప్రదింపు సమాచారం</h2>
+                    
+                    <div class="contact-card">
+                        <h3><i class="fas fa-phone"></i> <span class="lang-en">Phone Numbers</span><span class="lang-te">ఫోన్ నంబర్లు</span></h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="lang-en">Primary Number</h4>
+                                <h4 class="lang-te">ప్రాథమిక నంబర్</h4>
+                                <a href="tel:9848315831" class="contact-link">98483 15831</a>
+                                <p class="lang-en">Available 24 hours</p>
+                                <p class="lang-te">24 గంటలు అందుబాటులో</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="lang-en">WhatsApp</h4>
+                                <h4 class="lang-te">వాట్సాప్</h4>
+                                <a href="#" id="whatsappDirectLink" class="contact-link">86391 68617</a>
+                                <p class="lang-en">Quick chat & inquiries</p>
+                                <p class="lang-te">త్వరిత చాట్ & వివరాలు</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> <span class="lang-en">Location</span><span class="lang-te">స్థానం</span></h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-location-dot"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="lang-en">Visakhapatnam</h4>
+                                <h4 class="lang-te">విశాఖపట్నం</h4>
+                                <p class="lang-en">Andhra Pradesh, India</p>
+                                <p class="lang-te">ఆంధ్రప్రదేశ్, భారతదేశం</p>
+                                <p class="lang-en">Travels to all states for pooja</p>
+                                <p class="lang-te">పూజ కోసం అన్ని రాష్ట్రాలకు ప్రయాణాలు</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3><i class="fas fa-clock"></i> <span class="lang-en">Availability</span><span class="lang-te">లభ్యత</span></h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="lang-en">24/7 Availability</h4>
+                                <h4 class="lang-te">24/7 లభ్యత</h4>
+                                <p class="lang-en">Round the clock service</p>
+                                <p class="lang-te">రౌండ్ ది క్లాక్ సేవ</p>
+                                <p class="lang-en">Emergency rituals available</p>
+                                <p class="lang-te">అత్యవసర ఆచారాలు అందుబాటులో</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2 class="section-title lang-en">Send Message</h2>
+                    <h2 class="section-title lang-te">సందేశం పంపండి</h2>
+                    
+                    <div class="form-card">
+                        <!-- Alert Messages -->
+                        <div id="successAlert" class="alert alert-success">
+                            <i class="fas fa-check-circle"></i>
+                            <span class="lang-en">Message sent successfully! We'll contact you shortly.</span>
+                            <span class="lang-te">సందేశం విజయవంతంగా పంపబడింది! మేము త్వరలో మిమ్మల్ని సంప్రదిస్తాము.</span>
+                        </div>
+                        
+                        <div id="errorAlert" class="alert alert-error">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span class="lang-en">Please fill in all required fields correctly.</span>
+                            <span class="lang-te">దయచేసి అన్ని అవసరమైన ఫీల్డ్లను సరిగ్గా నింపండి.</span>
+                        </div>
+                        
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name" class="lang-en">Your Name *</label>
+                                <label for="name" class="lang-te">మీ పేరు *</label>
+                                <input type="text" id="name" name="name" class="form-control" required 
+                                       data-placeholder-en="Enter your full name" 
+                                       data-placeholder-te="మీ పూర్తి పేరు నమోదు చేయండి">
+                                <div class="error-message" id="nameError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="lang-en">Phone Number *</label>
+                                <label for="phone" class="lang-te">ఫోన్ నంబర్ *</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required 
+                                       data-placeholder-en="Enter your phone number" 
+                                       data-placeholder-te="మీ ఫోన్ నంబర్ నమోదు చేయండి">
+                                <div class="error-message" id="phoneError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="location" class="lang-en">Your Location</label>
+                                <label for="location" class="lang-te">మీ స్థానం</label>
+                                <input type="text" id="location" name="location" class="form-control" 
+                                       data-placeholder-en="Enter your city" 
+                                       data-placeholder-te="మీ నగరం నమోదు చేయండి">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service" class="lang-en">Service Interested In</label>
+                                <label for="service" class="lang-te">ఆసక్తి ఉన్న సేవ</label>
+                                <select id="service" name="service" class="form-control">
+                                    <option value="" class="lang-en">Select Service</option>
+                                    <option value="" class="lang-te">సేవ ఎంచుకోండి</option>
+                                    <option value="marriage" class="lang-en">Marriage Ceremony</option>
+                                    <option value="marriage" class="lang-te">వివాహ వేడుక</option>
+                                    <option value="gruha-pravesam" class="lang-en">Gruha Pravesam</option>
+                                    <option value="gruha-pravesam" class="lang-te">గృహ ప్రవేశం</option>
+                                    <option value="upanayanam" class="lang-en">Upanayanam</option>
+                                    <option value="upanayanam" class="lang-te">ఉపనయనం</option>
+                                    <option value="homam" class="lang-en">Homam / Havan</option>
+                                    <option value="homam" class="lang-te">హోమం / హవన్</option>
+                                    <option value="astrology" class="lang-en">Astrology Consultation</option>
+                                    <option value="astrology" class="lang-te">జ్యోతిష్య సంప్రదింపు</option>
+                                    <option value="other" class="lang-en">Other Service</option>
+                                    <option value="other" class="lang-te">ఇతర సేవ</option>
+                                </select>
+                                <div class="error-message" id="serviceError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="lang-en">Message</label>
+                                <label for="message" class="lang-te">సందేశం</label>
+                                <textarea id="message" name="message" class="form-control" 
+                                          data-placeholder-en="Enter your message or inquiry..." 
+                                          data-placeholder-te="మీ సందేశం లేదా వివరాలు నమోదు చేయండి..."></textarea>
+                            </div>
+                            
+                            <button type="button" id="submitToWhatsApp" class="whatsapp-submit-button">
+                                <i class="fab fa-whatsapp"></i>
+                                <span class="lang-en">Send via WhatsApp</span>
+                                <span class="lang-te">వాట్సాప్ ద్వారా పంపండి</span>
+                                <div class="spinner"></div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Availability Section -->
+    <section class="availability-section">
+        <div class="container">
+            <div class="availability-card">
+                <h2 class="section-title lang-en">Service Availability</h2>
+                <h2 class="section-title lang-te">సేవ లభ్యత</h2>
+                
+                <p class="lang-en">We travel to any state across India to perform Vedic rituals and ceremonies</p>
+                <p class="lang-te">వేదిక ఆచారాలు మరియు వేడుకలు నిర్వహించడానికి మేము భారతదేశం అంతటా ఏ రాష్ట్రానికైనా ప్రయాణిస్తాము</p>
+                
+                <div class="availability-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4 class="lang-en">24/7 Available</h4>
+                            <h4 class="lang-te">24/7 అందుబాటులో</h4>
+                            <p class="lang-en">Round the clock service</p>
+                            <p class="lang-te">రౌండ్ ది క్లాక్ సేవ</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-location-dot"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4 class="lang-en">Pan India Service</h4>
+                            <h4 class="lang-te">పాన్ ఇండియా సేవ</h4>
+                            <p class="lang-en">Travel to any location</p>
+                            <p class="lang-te">ఏ స్థానానికైనా ప్రయాణం</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4 class="lang-en">Flexible Scheduling</h4>
+                            <h4 class="lang-te">అనువైన షెడ్యూలింగ్</h4>
+                            <p class="lang-en">Accommodate your timing</p>
+                            <p class="lang-te">మీ సమయానికి అనుగుణంగా</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title lang-en">Our Location</h2>
+            <h2 class="section-title lang-te">మా స్థానం</h2>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.123456789012!2d83.2651893!3d17.7337117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39431f6663e6c1%3A0xff4d7d7fadd5c01!2sVastu%2C%20Jyothisya%2C%20Purohit%20(Indraganti%20Srinivasa%20sarma%20)!5e0!3m2!1sen!2sin!4v1234567890" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+            <div style="text-align: center; margin-top: 1rem;">
+                <a href="https://www.google.com/maps/place/Vastu,+Jyothisya,+Purohit+(Indraganti+Srinivasa+sarma+)/@17.7337117,83.2677795,17z/data=!3m1!4b1!4m6!3m5!1s0x3a39431f6663e6c1:0xff4d7d7fadd5c01!8m2!3d17.7337117!4d83.2677795!16s%2Fg%2F11y4zw16ym?hl=en-GB&entry=ttu&g_ep=EgoyMDI5MTEyMy4xIKXMDSoASAFQAw%3D%3D" 
+                   target="_blank" class="cta-button" style="display: inline-block; margin-top: 1rem;">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span class="lang-en">Open in Google Maps</span>
+                    <span class="lang-te">గూగుల్ మ్యాప్స్లో తెరవండి</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+       <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="lang-en">Pandit Services</h3>
+                    <h3 class="lang-te">పండిత్ సేవలు</h3>
+                    <p class="lang-en">Traditional Vedic rituals and ceremonies with 25+ years of experience</p>
+                    <p class="lang-te">25+ సంవత్సరాల అనుభవంతో సంప్రదాయ వేదిక ఆచారాలు మరియు వేడుకలు</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="lang-en">Contact Info</h3>
+                    <h3 class="lang-te">సంప్రదింపు సమాచారం</h3>
+                    <div class="contact-info-footer">
+                        <div class="contact-item-footer">
+                            <i class="fas fa-phone"></i>
+                            <span><strong>98483 15831</strong></span>
+                        </div>
+                        
+                        <div class="contact-item-footer">
+                            <i class="fas fa-envelope"></i>
+                            <span>
+                                <a href="mailto:indraganti369@gmail.com" style="color:white; text-decoration: none;">indraganti369@gmail.com</a>
+                            </span>
+                        </div>
+                        
+                        <div class="contact-item-footer">
+                            <i class="fab fa-whatsapp"></i>
+                            <span><strong>86391 68617</strong></span>
+                        </div>
+                        
+                        <div class="contact-item-footer">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="lang-en">Visakhapatnam, AP</span>
+                            <span class="lang-te">విశాఖపట్నం, ఆంధ్రప్రదేశ్</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="lang-en">Quick Links</h3>
+                    <h3 class="lang-te">త్వరిత లింకులు</h3>
+                    <p><a href="index.html">
+                        <span class="lang-en">Home</span>
+                        <span class="lang-te">హోమ్</span>
+                    </a></p>
+                    <p><a href="services.html">
+                        <span class="lang-en">Services</span>
+                        <span class="lang-te">సేవలు</span>
+                    </a></p>
+                    <p><a href="about.html">
+                        <span class="lang-en">About</span>
+                        <span class="lang-te">గురించి</span>
+                    </a></p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p class="lang-en">© 2025 Pandit Services. All rights reserved.</p>
+                <p class="lang-te">© 2025 పండిత్ సేవలు. అన్ని హక్కులు రక్షించబడినవి.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- WhatsApp Floating Button -->
+    <a href="#" id="floatingWhatsApp" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Call Floating Button -->
+    <a href="tel:9848315831" class="call-float">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <script>
+        // DOM Elements
+        const languageToggle = document.getElementById('languageToggle');
+        const contactForm = document.getElementById('contactForm');
+        const submitToWhatsAppBtn = document.getElementById('submitToWhatsApp');
+        const floatingWhatsApp = document.getElementById('floatingWhatsApp');
+        const quickWhatsApp = document.getElementById('quickWhatsApp');
+        const whatsappDirectLink = document.getElementById('whatsappDirectLink');
+        const successAlert = document.getElementById('successAlert');
+        const errorAlert = document.getElementById('errorAlert');
+        
+        // Language Toggle
+        languageToggle.addEventListener('click', () => {
+            const isTelugu = document.body.classList.toggle('telugu');
+            
+            // Update button text
+            languageToggle.innerHTML = isTelugu ? 'English' : 'తెలుగు';
+            
+            // Update all placeholders
+            updatePlaceholders(isTelugu ? 'te' : 'en');
+        });
+        
+        // Function to update placeholders and select options
+        function updatePlaceholders(language) {
+            const inputs = document.querySelectorAll('input[data-placeholder-en], textarea[data-placeholder-en]');
+            const selects = document.querySelectorAll('select');
+            
+            // Update input placeholders
+            inputs.forEach(input => {
+                if (language === 'te') {
+                    input.placeholder = input.getAttribute('data-placeholder-te') || '';
+                } else {
+                    input.placeholder = input.getAttribute('data-placeholder-en') || '';
+                }
+            });
+            
+            // Update select options visibility
+            selects.forEach(select => {
+                const options = select.querySelectorAll('option');
+                options.forEach(option => {
+                    if (option.classList.contains(`lang-${language}`)) {
+                        option.style.display = 'block';
+                    } else {
+                        option.style.display = 'none';
+                    }
+                });
+                
+                // Ensure first option is visible
+                const firstOption = select.querySelector('option:first-child');
+                firstOption.style.display = 'block';
+                
+                // Reset to first option if current is hidden
+                const currentOption = select.options[select.selectedIndex];
+                if (currentOption.style.display === 'none') {
+                    select.selectedIndex = 0;
+                }
+            });
+        }
+        
+        // Form Validation
+        function validateForm() {
+            let isValid = true;
+            const isTelugu = document.body.classList.contains('telugu');
+            
+            // Clear previous errors
+            document.querySelectorAll('.error-message').forEach(el => {
+                el.classList.remove('show');
+                el.textContent = '';
+            });
+            
+            document.querySelectorAll('.form-control.error').forEach(el => {
+                el.classList.remove('error');
+            });
+            
+            // Validate Name
+            const name = document.getElementById('name');
+            if (!name.value.trim()) {
+                showError(name, 'name', 
+                    isTelugu ? 'దయచేసి మీ పేరు నమోదు చేయండి' : 'Please enter your name');
+                isValid = false;
+            }
+            
+            // Validate Phone Number
+            const phone = document.getElementById('phone');
+            const phoneRegex = /^[0-9]{10}$/;
+            const cleanPhone = phone.value.replace(/\D/g, '');
+            
+            if (!phone.value.trim()) {
+                showError(phone, 'phone', 
+                    isTelugu ? 'దయచేసి మీ ఫోన్ నంబర్ నమోదు చేయండి' : 'Please enter your phone number');
+                isValid = false;
+            } else if (!phoneRegex.test(cleanPhone)) {
+                showError(phone, 'phone', 
+                    isTelugu ? 'దయచేసి సరైన 10-అంకెల ఫోన్ నంబర్ నమోదు చేయండి' : 'Please enter a valid 10-digit phone number');
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+        
+        function showError(input, errorId, message) {
+            input.classList.add('error');
+            const errorElement = document.getElementById(errorId + 'Error');
+            if (errorElement) {
+                errorElement.textContent = message;
+                errorElement.classList.add('show');
+            }
+        }
+        
+        // Function to get form data
+        function getFormData() {
+            const isTelugu = document.body.classList.contains('telugu');
+            
+            return {
+                name: document.getElementById('name').value.trim(),
+                phone: document.getElementById('phone').value.replace(/\D/g, ''),
+                location: document.getElementById('location').value.trim(),
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value.trim(),
+                language: isTelugu ? 'te' : 'en',
+                timestamp: new Date().toISOString()
+            };
+        }
+        
+        // Function to create WhatsApp message - SIMPLIFIED FORMAT
+        function createWhatsAppMessage(data) {
+            const isTelugu = data.language === 'te';
+            
+            // Format date and time
+            const date = new Date(data.timestamp);
+            const formattedDate = date.toLocaleDateString();
+            
+            const serviceName = getServiceName(data.service, isTelugu);
+            
+            // SIMPLIFIED FORMAT - Less symbols, cleaner
+            return isTelugu ? 
+                `పండిత్ సేవలు - కొత్త సంప్రదింపు%0A%0A` +
+                `పేరు: ${encodeURIComponent(data.name)}%0A` +
+                `ఫోన్: ${encodeURIComponent(data.phone)}%0A` +
+                `స్థానం: ${encodeURIComponent(data.location || 'నమోదు చేయలేదు')}%0A` +
+                `సేవ: ${encodeURIComponent(serviceName)}%0A` +
+                `సందేశం: ${encodeURIComponent(data.message || 'సందేశం లేదు')}%0A%0A` +
+                `తేదీ: ${formattedDate}` :
+                
+                `Pandit Services - New Contact%0A%0A` +
+                `Name: ${encodeURIComponent(data.name)}%0A` +
+                `Phone: ${encodeURIComponent(data.phone)}%0A` +
+                `Location: ${encodeURIComponent(data.location || 'Not provided')}%0A` +
+                `Service: ${encodeURIComponent(serviceName)}%0A` +
+                `Message: ${encodeURIComponent(data.message || 'No message')}%0A%0A` +
+                `Date: ${formattedDate}`;
+        }
+        
+        // Function to open WhatsApp with message
+        function openWhatsAppWithMessage(message) {
+            // Use the correct WhatsApp phone number with country code
+            const whatsappUrl = `https://wa.me/918639168617?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        // Main Submit to WhatsApp button click
+        submitToWhatsAppBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Validate form
+            if (!validateForm()) {
+                errorAlert.classList.add('show');
+                setTimeout(() => {
+                    errorAlert.classList.remove('show');
+                }, 5000);
+                return;
+            }
+            
+            // Show loading state
+            submitToWhatsAppBtn.classList.add('loading');
+            submitToWhatsAppBtn.disabled = true;
+            
+            // Get form data
+            const data = getFormData();
+            
+            // Create WhatsApp message
+            const whatsappMessage = createWhatsAppMessage(data);
+            
+            // Open WhatsApp after short delay
+            setTimeout(() => {
+                openWhatsAppWithMessage(whatsappMessage);
+                
+                // Show success message
+                successAlert.classList.add('show');
+                setTimeout(() => {
+                    successAlert.classList.remove('show');
+                }, 5000);
+                
+                // Remove loading state
+                submitToWhatsAppBtn.classList.remove('loading');
+                submitToWhatsAppBtn.disabled = false;
+                
+                // Optional: Reset form after successful submission
+                setTimeout(() => {
+                    contactForm.reset();
+                    const isTelugu = document.body.classList.contains('telugu');
+                    updatePlaceholders(isTelugu ? 'te' : 'en');
+                }, 2000);
+                
+            }, 500);
+        });
+        
+        // Quick WhatsApp card click
+        quickWhatsApp.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const data = getFormData();
+            
+            // Check if form has minimum data
+            if (data.name && data.phone) {
+                // If form has data, send it
+                const whatsappMessage = createWhatsAppMessage(data);
+                openWhatsAppWithMessage(whatsappMessage);
+            } else {
+                // If no data, open empty WhatsApp chat
+                openWhatsAppWithMessage('');
+            }
+        });
+        
+        // Floating WhatsApp button click
+        floatingWhatsApp.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const data = getFormData();
+            
+            // Check if form has minimum data
+            if (data.name && data.phone) {
+                // If form has data, send it
+                const whatsappMessage = createWhatsAppMessage(data);
+                openWhatsAppWithMessage(whatsappMessage);
+            } else {
+                // If no data, open empty WhatsApp chat
+                openWhatsAppWithMessage('');
+            }
+        });
+        
+        // Direct WhatsApp link click
+        whatsappDirectLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const data = getFormData();
+            
+            // Check if form has minimum data
+            if (data.name && data.phone) {
+                // If form has data, send it
+                const whatsappMessage = createWhatsAppMessage(data);
+                openWhatsAppWithMessage(whatsappMessage);
+            } else {
+                // If no data, open empty WhatsApp chat
+                openWhatsAppWithMessage('');
+            }
+        });
+        
+        // Helper function to get service name
+        function getServiceName(serviceValue, isTelugu) {
+            const services = {
+                'marriage': { en: 'Marriage Ceremony', te: 'వివాహ వేడుక' },
+                'gruha-pravesam': { en: 'Gruha Pravesam', te: 'గృహ ప్రవేశం' },
+                'upanayanam': { en: 'Upanayanam', te: 'ఉపనయనం' },
+                'homam': { en: 'Homam / Havan', te: 'హోమం / హవన్' },
+                'astrology': { en: 'Astrology Consultation', te: 'జ్యోతిష్య సంప్రదింపు' },
+                'other': { en: 'Other Service', te: 'ఇతర సేవ' }
+            };
+            
+            return services[serviceValue] ? 
+                (isTelugu ? services[serviceValue].te : services[serviceValue].en) : 
+                (isTelugu ? 'తెలియదు' : 'Not specified');
+        }
+        
+        // Real-time validation
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('blur', () => {
+                if (input.id === 'phone') {
+                    const phoneRegex = /^[0-9]{10}$/;
+                    const cleanPhone = input.value.replace(/\D/g, '');
+                    
+                    if (input.value.trim() && !phoneRegex.test(cleanPhone)) {
+                        const isTelugu = document.body.classList.contains('telugu');
+                        showError(input, 'phone', 
+                            isTelugu ? 'దయచేసి సరైన 10-అంకెల ఫోన్ నంబర్ నమోదు చేయండి' : 
+                            'Please enter a valid 10-digit phone number');
+                    }
+                }
+            });
+            
+            input.addEventListener('input', () => {
+                if (input.classList.contains('error')) {
+                    input.classList.remove('error');
+                    const errorId = input.id + 'Error';
+                    const errorElement = document.getElementById(errorId);
+                    if (errorElement) {
+                        errorElement.classList.remove('show');
+                    }
+                }
+            });
+        });
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set default language to English
+            document.body.classList.remove('telugu');
+            
+            // Set language button text
+            languageToggle.innerHTML = 'తెలుగు';
+            
+            // Set initial placeholders to English
+            updatePlaceholders('en');
+        });
+
+        // Smooth scroll for location link
+        document.querySelector('a[href="#location"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.map-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

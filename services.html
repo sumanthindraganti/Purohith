@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | పండిత్ సేవలు | శ్రీ ఇంద్రగంటి శ్రీనివాస శర్మ గారు</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles - Updated with Homepage Variables */
+        :root {
+            --bg-color: #fff8e1;
+            --text-color: #5d4037;
+            --vibrant-orange: #ff6f00;
+            --vibrant-yellow: #ffca28;
+            --vibrant-red: #d32f2f;
+            --vibrant-green: #388e3c;
+            --vibrant-blue: #1976d2;
+            --vibrant-purple: #7b1fa2;
+            --light-gold: #ffecb3;
+            --temple-red: #b71c1c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', 'Noto Sans Telugu', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles - Updated with Homepage Animations */
+        header {
+            background: linear-gradient(135deg, var(--vibrant-orange), var(--vibrant-red));
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+            animation: headerSlideDown 0.8s ease-out;
+        }
+        
+        @keyframes headerSlideDown {
+            0% { transform: translateY(-100%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            margin-left: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin-left: 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--vibrant-yellow);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::before {
+            width: 100%;
+        }
+        
+        nav a:hover {
+            color: var(--vibrant-yellow);
+        }
+        
+        .nav-active {
+            color: var(--vibrant-yellow);
+            position: relative;
+        }
+        
+        .nav-active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--vibrant-yellow);
+        }
+        
+        .language-toggle {
+            margin-left: 20px;
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .language-toggle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .language-toggle:hover::before {
+            left: 100%;
+        }
+        
+        .language-toggle:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section - Updated with Homepage Animations */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('BG-IMG2.jpeg') center/cover;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: heroFadeIn 1.2s ease-out;
+        }
+        
+        @keyframes heroFadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: contentSlideUp 1s ease-out 0.5s both;
+        }
+        
+        @keyframes contentSlideUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--vibrant-yellow);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            animation: textGlow 3s infinite alternate;
+        }
+        
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 5px rgba(255, 202, 40, 0.5); }
+            100% { text-shadow: 0 0 20px rgba(255, 202, 40, 0.8), 0 0 30px rgba(255, 202, 40, 0.6); }
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--vibrant-red), var(--vibrant-orange));
+            color: white;
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            margin: 0.5rem;
+            position: relative;
+            overflow: hidden;
+            animation: buttonPulse 2s infinite;
+        }
+        
+        @keyframes buttonPulse {
+            0% { box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+            50% { box-shadow: 0 4px 20px rgba(230, 81, 0, 0.6); }
+            100% { box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid white;
+            animation: none;
+        }
+        
+        .cta-button.secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        /* Services Section - Updated */
+        .services-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--bg-color), #fff5e6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--vibrant-orange);
+            position: relative;
+            font-size: 2.2rem;
+            animation: titleFadeIn 1s ease-out;
+        }
+        
+        @keyframes titleFadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--vibrant-red), var(--vibrant-yellow));
+            margin: 15px auto;
+            border-radius: 2px;
+            animation: lineExtend 1s ease-out 0.5s both;
+        }
+        
+        @keyframes lineExtend {
+            0% { width: 0; }
+            100% { width: 100px; }
+        }
+        
+        .category-title {
+            text-align: center;
+            margin: 4rem 0 2rem;
+            color: var(--vibrant-orange);
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+            animation: titleFadeIn 1s ease-out;
+        }
+        
+        .category-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--vibrant-yellow);
+            margin: 10px auto;
+            border-radius: 2px;
+            animation: lineExtend 1s ease-out 0.5s both;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s;
+            position: relative;
+            border-top: 4px solid var(--vibrant-yellow);
+            animation: cardFadeIn 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .service-card:nth-child(4) { animation-delay: 0.4s; }
+        .service-card:nth-child(5) { animation-delay: 0.5s; }
+        .service-card:nth-child(6) { animation-delay: 0.6s; }
+        .service-card:nth-child(7) { animation-delay: 0.7s; }
+        
+        @keyframes cardFadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,179,0,0.05), rgba(230,81,0,0.05));
+            z-index: 1;
+        }
+        
+        .service-icon {
+            background: linear-gradient(135deg, var(--light-gold), var(--vibrant-yellow));
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .service-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-icon img {
+            transform: scale(1.05);
+        }
+        
+        .service-content {
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-content h3 {
+            color: var(--vibrant-orange);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .service-content p {
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-button {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--vibrant-red);
+            padding: 8px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 1px solid var(--vibrant-red);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .service-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(211, 47, 47, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .service-button:hover::before {
+            left: 100%;
+        }
+        
+        .service-button:hover {
+            background-color: var(--vibrant-red);
+            color: white;
+        }
+        
+        /* Package Section - Updated */
+        .package-section {
+            padding: 4rem 0;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .package-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s;
+            position: relative;
+            border: 2px solid var(--vibrant-yellow);
+            animation: cardFadeIn 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .package-card:nth-child(1) { animation-delay: 0.1s; }
+        .package-card:nth-child(2) { animation-delay: 0.2s; }
+        .package-card:nth-child(3) { animation-delay: 0.3s; }
+        
+        .package-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border-color: var(--vibrant-orange);
+        }
+        
+        .package-header {
+            background: linear-gradient(135deg, var(--vibrant-orange), var(--vibrant-red));
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .package-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .package-price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--vibrant-yellow);
+            animation: pricePulse 2s infinite alternate;
+        }
+        
+        @keyframes pricePulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+        
+        .package-content {
+            padding: 2rem;
+        }
+        
+        .package-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .package-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .package-features li:hover {
+            transform: translateX(5px);
+            color: var(--vibrant-orange);
+        }
+        
+        .package-features li:before {
+            content: '✓';
+            color: var(--vibrant-yellow);
+            font-weight: bold;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .package-features li:hover:before {
+            transform: scale(1.2);
+            color: var(--vibrant-green);
+        }
+        
+        /* Contact Modal - Updated */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .contact-modal {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 500px;
+            width: 90%;
+            transform: translateY(-50px);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            animation: modalAppear 0.5s ease-out;
+        }
+        
+        @keyframes modalAppear {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .modal-overlay.active .contact-modal {
+            transform: translateY(0);
+        }
+        
+        .modal-header {
+            background: linear-gradient(135deg, var(--vibrant-orange), var(--vibrant-red));
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .modal-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            transform: scale(1.2) rotate(90deg);
+        }
+        
+        .modal-content {
+            padding: 2rem;
+        }
+        
+        .modal-service-name {
+            text-align: center;
+            color: var(--vibrant-orange);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            animation: textGlow 3s infinite alternate;
+        }
+        
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-option {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: var(--bg-color);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 202, 40, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .contact-option:hover::before {
+            left: 100%;
+        }
+        
+        .contact-option:hover {
+            background: var(--light-gold);
+            transform: translateY(-3px);
+        }
+        
+        .contact-icon {
+            background: var(--vibrant-yellow);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-option:hover .contact-icon {
+            background: var(--vibrant-orange);
+            transform: scale(1.1) rotate(10deg);
+        }
+        
+        .contact-text {
+            flex: 1;
+        }
+        
+        .contact-text h4 {
+            color: var(--vibrant-orange);
+            margin-bottom: 0.2rem;
+        }
+        
+        .contact-text p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .modal-footer {
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .modal-footer p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        /* Footer - Updated with Homepage Styles */
+        footer {
+            background: linear-gradient(135deg, var(--text-color), #3e2723);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-section h3 {
+            color: var(--vibrant-yellow);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateX(5px);
+            color: var(--vibrant-yellow);
+        }
+        
+        /* Quick Links - Updated with Homepage Effects */
+        .quick-links p {
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .quick-links a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quick-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 202, 40, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .quick-links a:hover::before {
+            left: 100%;
+        }
+        
+        .quick-links a:hover {
+            color: var(--vibrant-yellow);
+            transform: translateX(5px);
+            background-color: rgba(255, 202, 40, 0.1);
+        }
+        
+        .quick-links a::after {
+            content: '→';
+            position: absolute;
+            right: -20px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            color: var(--vibrant-yellow);
+        }
+        
+        .quick-links a:hover::after {
+            right: 5px;
+            opacity: 1;
+        }
+        
+        .copyright {
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* WhatsApp Button - Updated */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            text-decoration: none;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: all 0.3s;
+            animation: pulse 2s infinite, bounce 3s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        
+        /* Call Button - Updated */
+        .call-float {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            text-decoration: none;
+            background: linear-gradient(135deg, var(--vibrant-green), #2E7D32);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: all 0.3s;
+            animation: pulse 2s infinite, bounce 3s infinite 1s;
+        }
+        
+        .call-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        /* Temple decorative elements - Updated */
+        .temple-border {
+            height: 10px;
+            background: linear-gradient(to right, var(--vibrant-yellow), var(--vibrant-orange), var(--vibrant-red), var(--vibrant-orange), var(--vibrant-yellow));
+            margin: 2rem 0;
+            animation: borderFlow 3s infinite linear;
+            background-size: 200% 100%;
+        }
+        
+        @keyframes borderFlow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+        
+        /* Language toggle */
+        .lang-en {
+            display: block;
+        }
+        
+        .lang-te {
+            display: none;
+        }
+        
+        body.telugu .lang-en {
+            display: none;
+        }
+        
+        body.telugu .lang-te {
+            display: block;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav li {
+                margin: 0.5rem;
+            }
+            
+            .hero {
+                min-height: 50vh;
+                padding: 3rem 1rem;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .mobile-menu {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+            
+            .mobile-nav {
+                display: none;
+                width: 100%;
+                text-align: center;
+                margin-top: 1rem;
+            }
+            
+            .mobile-nav.active {
+                display: block;
+            }
+            
+            .mobile-nav ul {
+                flex-direction: column;
+            }
+            
+            .mobile-nav li {
+                margin: 0.5rem 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .category-title {
+                font-size: 1.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .package-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-button {
+                display: block;
+                margin: 1rem auto;
+                width: 80%;
+                max-width: 250px;
+            }
+            
+            .service-icon {
+                height: 180px;
+            }
+            
+            .contact-modal {
+                width: 95%;
+            }
+            
+            /* Responsive quick links */
+            .quick-links a {
+                padding: 8px 15px;
+                display: block;
+                margin-bottom: 0.8rem;
+            }
+            
+            .quick-links a::after {
+                right: -25px;
+            }
+            
+            .quick-links a:hover::after {
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon">🛕</div>
+                <h1 class="lang-en">Pandit Services</h1>
+                <h1 class="lang-te">పండిత్ సేవలు</h1>
+            </div>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">
+                        <span class="lang-en">Home</span>
+                        <span class="lang-te">హోమ్</span>
+                    </a></li>
+                    <li><a href="#" class="nav-active">
+                        <span class="lang-en">Services</span>
+                        <span class="lang-te">సేవలు</span>
+                    </a></li>
+                    <li><a href="about.html">
+                        <span class="lang-en">About</span>
+                        <span class="lang-te">గురించి</span>
+                    </a></li>
+                    <li><a href="contact.html">
+                        <span class="lang-en">Contact</span>
+                        <span class="lang-te">సంప్రదించండి</span>
+                    </a></li>
+                </ul>
+            </nav>
+            
+            <button class="language-toggle" id="languageToggle">
+                <span class="lang-en">తెలుగు</span>
+                <span class="lang-te">English</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="lang-en">Our Complete Services</h2>
+            <h2 class="lang-te">మా సంపూర్ణ సేవలు</h2>
+            
+            <p class="lang-en">Comprehensive Vedic Rituals, Homams, Astrology & Pooja Services</p>
+            <p class="lang-te">సమగ్ర వేదిక ఆచారాలు, హోమాలు, జ్యోతిష్యం & పూజ సేవలు</p>
+            
+            <p class="lang-en">Authentic Vedic traditions performed with devotion and precision</p>
+            <p class="lang-te">భక్తి భావంతో మరియు ఖచ్చితత్వంతో నిర్వహించబడే ప్రామాణిక వేదిక సంప్రదాయాలు</p>
+            
+            <div class="hero-buttons">
+                <a href="tel:9848315831" class="cta-button">
+                    <i class="fas fa-phone"></i>
+                    <span class="lang-en">Book Consultation</span>
+                    <span class="lang-te">సంప్రదింపు బుక్ చేయండి</span>
+                </a>
+                <a href="https://wa.me/918639168617" class="cta-button secondary">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="lang-en">WhatsApp Inquiry</span>
+                    <span class="lang-te">వాట్సాప్ ద్వారా వివరాలు</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Major Poojas & Rituals Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title lang-en">Major Poojas & Rituals</h2>
+            <h2 class="section-title lang-te">ప్రధాన పూజలు & ఆచారాలు</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/Marriage.jpeg" alt="Marriage Rituals">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Marriage Rituals</h3>
+                        <h3 class="lang-te">వివాహ ఆచారాలు</h3>
+                        <p class="lang-en">Traditional Hindu wedding rituals with authentic Vedic mantras and complete ceremony procedures.</p>
+                        <p class="lang-te">ప్రామాణిక వేదిక మంత్రాలు మరియు సంపూర్ణ వేడుక విధానాలతో సంప్రదాయ హిందూ వివాహ ఆచారాలు.</p>
+                        <button class="service-button book-now-btn" data-service="Marriage Rituals">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/House.jpeg" alt="Housewarming">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Gruha Pravesam</h3>
+                        <h3 class="lang-te">గృహ ప్రవేశం</h3>
+                        <p class="lang-en">Housewarming ceremony with Vastu shanti homam for peace and prosperity in your new home.</p>
+                        <p class="lang-te">మీ కొత్త ఇంటిలో శాంతి మరియు ఐశ్వర్యం కోసం వాస్తు శాంతి హోమంతో గృహ ప్రవేశ వేడుక.</p>
+                        <button class="service-button book-now-btn" data-service="Gruha Pravesam">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/Upanayanam.jpeg" alt="Upanayanam">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Upanayanam</h3>
+                        <h3 class="lang-te">ఉపనయనం</h3>
+                        <p class="lang-en">Sacred thread ceremony performed with proper Vedic process and traditional rituals.</p>
+                        <p class="lang-te">సరైన వేదిక విధానం మరియు సంప్రదాయ ఆచారాలతో నిర్వహించబడే పవిత్ర థ్రెడ్ వేడుక.</p>
+                        <button class="service-button book-now-btn" data-service="Upanayanam">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/Anaprasana.jpeg" alt="Annaprasana">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Annaprasana</h3>
+                        <h3 class="lang-te">అన్నప్రాశన</h3>
+                        <p class="lang-en">First rice-feeding ceremony for babies with traditional rituals and blessings.</p>
+                        <p class="lang-te">శిశువులకు సంప్రదాయ ఆచారాలు మరియు ఆశీర్వాదాలతో మొదటి అన్నప్రాశన వేడుక.</p>
+                        <button class="service-button book-now-btn" data-service="Annaprasana">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/Satyanarayana-ratam-1.jpeg" alt="Satyanarayana Vratham">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Satyanarayana Vratham</h3>
+                        <h3 class="lang-te">సత్యనారాయణ వ్రతం</h3>
+                        <p class="lang-en">Prosperity and happiness pooja for family well-being and divine blessings.</p>
+                        <p class="lang-te">కుటుంబ సుఖసంతోషం మరియు దైవిక ఆశీర్వాదాల కోసం ఐశ్వర్యం మరియు సంతోషం పూజ.</p>
+                        <button class="service-button book-now-btn" data-service="Satyanarayana Vratham">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/Laxmi-Puja.jpeg" alt="Lakshmi Puja">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Lakshmi Puja</h3>
+                        <h3 class="lang-te">లక్ష్మీ పూజ</h3>
+                        <p class="lang-en">Goddess Lakshmi worship for money, health, and business success with Vedic mantras.</p>
+                        <p class="lang-te">డబ్బు, ఆరోగ్యం మరియు వ్యాపార విజయం కోసం వేదిక మంత్రాలతో దేవి లక్ష్మీ ఆరాధన.</p>
+                        <button class="service-button book-now-btn" data-service="Lakshmi Puja">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+                 <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/Abhisekam.png" alt="Rudrabhishekam">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Rudrabhishekam</h3>
+                        <h3 class="lang-te">రుద్రాభిషేకం</h3>
+                        <p class="lang-en">Sacred bathing ritual of Shiva Lingam with Vedic chants and offerings.</p>
+                        <p class="lang-te">వేదిక మంత్రాలు మరియు అర్పణలతో శివ లింగం యొక్క పవిత్ర స్నాన ఆచారం.</p>
+                        <button class="service-button book-now-btn" data-service="Rudrabhishekam">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="temple-border"></div>
+
+    <!-- Homams Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="category-title lang-en">Homams (Havans)</h2>
+            <h2 class="category-title lang-te">హోమాలు (హవన్లు)</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/Chandi-homam.jpeg" alt="Chandi Homam">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Chandi Homam</h3>
+                        <h3 class="lang-te">చండీ హోమం</h3>
+                        <p class="lang-en">Powerful fire ritual to remove obstacles and invoke divine protection.</p>
+                        <p class="lang-te">అడ్డంకులను తొలగించడానికి మరియు దైవిక రక్షణను ప్రార్థించడానికి శక్తివంతమైన అగ్ని ఆచారం.</p>
+                        <button class="service-button book-now-btn" data-service="Chandi Homam">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/Nava-Graha-Homam.jpeg" alt="Nava Graha Homam">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Nava Graha Homam</h3>
+                        <h3 class="lang-te">నవ గ్రహ హోమం</h3>
+                        <p class="lang-en">Sacred fire ritual to appease the nine planets and bring planetary harmony.</p>
+                        <p class="lang-te">తొమ్మిది గ్రహాలను ప్రశాంతపరచడానికి మరియు గ్రహ సామరస్యాన్ని తీసుకురావడానికి పవిత్ర అగ్ని ఆచారం.</p>
+                        <button class="service-button book-now-btn" data-service="Nava Graha Homam">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/nakshatra-Havan.jpg" alt="Nakshatra Japam">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Nakshatra Japam & Homam</h3>
+                        <h3 class="lang-te">నక్షత్ర జపం</h3>
+                        <p class="lang-en">Star-based chanting rituals & Homam   for specific birth constellations and their influences.</p>
+                        <p class="lang-te">నిర్దిష్ట జన్మ నక్షత్రాలు మరియు వాటి ప్రభావాల కోసం నక్షత్ర-ఆధారిత జప ఆచారాలు.</p>
+                        <button class="service-button book-now-btn" data-service="Nakshatra Japam">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/sudarshana-Homam.png" alt="Sudarshana Homam">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Sudarshana Homam</h3>
+                        <h3 class="lang-te">సుదర్శన హోమం</h3>
+                        <p class="lang-en">Divine discus worship for protection from negative energies and enemies.</p>
+                        <p class="lang-te">నకారాత్మక శక్తులు మరియు శత్రువుల నుండి రక్షణ కోసం దైవిక చక్ర ఆరాధన.</p>
+                        <button class="service-button book-now-btn" data-service="Sudarshana Homam">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/Mrutunjaya-Homam.jpeg" alt="Mrutyunjaya Homam">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Mrutyunjaya Homam</h3>
+                        <h3 class="lang-te">మృత్యుంజయ హోమం</h3>
+                        <p class="lang-en">Lord Shiva worship for longevity, health, and victory over death-related fears.</p>
+                        <p class="lang-te">దీర్ఘాయువు, ఆరోగ్యం మరియు మరణ సంబంధిత భయాలపై విజయం కోసం భగవాన్ శివ ఆరాధన.</p>
+                        <button class="service-button book-now-btn" data-service="Mrutyunjaya Homam">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Astrology & Vastu Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="category-title lang-en">Astrology & Vastu Services</h2>
+            <h2 class="category-title lang-te">జ్యోతిష్యం & వాస్తు సేవలు</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/jartakam.jpeg" alt="Jatakalu Writing">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Jatakalu Writing</h3>
+                        <h3 class="lang-te">జాతకాలు రాయడం</h3>
+                        <p class="lang-en">Professional birth chart preparation with detailed analysis and predictions.</p>
+                        <p class="lang-te">వివరణాత్మక విశ్లేషణ మరియు అంచనాలతో ప్రొఫెషనల్ జన్మ చార్ట్ తయారీ.</p>
+                        <button class="service-button book-now-btn" data-service="Jatakalu Writing">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/Kundali-matching.jpeg" alt="Kundali Matching">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Kundali Matching</h3>
+                        <h3 class="lang-te">కుండలీ జోడింపు</h3>
+                        <p class="lang-en">Compatibility analysis for marriage with detailed gun milap and aspects.</p>
+                        <p class="lang-te">వివరణాత్మక గుణ మిలాప్ మరియు అంశాలతో వివాహం కోసం అనుకూలత విశ్లేషణ.</p>
+                        <button class="service-button book-now-btn" data-service="Kundali Matching">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/Muhurtam.png" alt="Muhurtham Selection">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Muhurtham Selection</h3>
+                        <h3 class="lang-te">ముహూర్తం ఎంపిక</h3>
+                        <p class="lang-en">Auspicious timing selection for important events based on Vedic astrology.</p>
+                        <p class="lang-te">వేదిక జ్యోతిష్యం ఆధారంగా ముఖ్యమైన సంఘటనల కోసం శుభమైన సమయం ఎంపిక.</p>
+                        <button class="service-button book-now-btn" data-service="Muhurtham Selection">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="/Pooja-Pics/vastu.jpeg" alt="Vastu Consultation">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Vastu Consultation</h3>
+                        <h3 class="lang-te">వాస్తు సలహా</h3>
+                        <p class="lang-en">Home and business Vastu analysis with remedies for harmony and prosperity.</p>
+                        <p class="lang-te">సామరస్యం మరియు ఐశ్వర్యం కోసం పరిష్కారాలతో ఇల్లు మరియు వ్యాపార వాస్తు విశ్లేషణ.</p>
+                        <button class="service-button book-now-btn" data-service="Vastu Consultation">
+                            <span class="lang-en">Book Now</span>
+                            <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="temple-border"></div>
+
+    <!-- Special Packages Section -->
+    <section class="package-section">
+        <div class="container">
+            <h2 class="section-title lang-en">Special Offer Packages</h2>
+            <h2 class="section-title lang-te">ప్రత్యేక ఆఫర్ ప్యాకేజీలు</h2>
+            
+            <div class="package-grid">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3 class="lang-en">Marriage Full Ritual Package</h3>
+                        <h3 class="lang-te">వివాహ సంపూర్ణ ఆచార ప్యాకేజీ</h3>
+                        <div class="package-price">Custom Quote</div>
+                    </div>
+                    <div class="package-content">
+                        <ul class="package-features">
+                            <li class="lang-en">Complete wedding rituals</li>
+                            <li class="lang-te">సంపూర్ణ వివాహ ఆచారాలు</li>
+                            <li class="lang-en">All Vedic ceremonies included</li>
+                            <li class="lang-te">అన్ని వేదిక వేడుకలు చేర్చబడ్డాయి</li>
+                            <li class="lang-en">Muhurtham selection</li>
+                            <li class="lang-te">ముహూర్తం ఎంపిక</li>
+                            <li class="lang-en">Pre and post-wedding rituals</li>
+                            <li class="lang-te">వివాహానికి ముందు మరియు తర్వాత ఆచారాలు</li>
+                        </ul>
+                        <button class="cta-button book-now-btn" data-service="Marriage Full Ritual Package">
+                            <span class="lang-en">Get Quote</span>
+                            <span class="lang-te">కోట్ పొందండి</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3 class="lang-en">Housewarming Complete Package</h3>
+                        <h3 class="lang-te">గృహ ప్రవేశ సంపూర్ణ ప్యాకేజీ</h3>
+                        <div class="package-price">Custom Quote</div>
+                    </div>
+                    <div class="package-content">
+                        <ul class="package-features">
+                            <li class="lang-en">Complete housewarming ceremony</li>
+                            <li class="lang-te">సంపూర్ణ గృహ ప్రవేశ వేడుక</li>
+                            <li class="lang-en">Vastu shanti homam</li>
+                            <li class="lang-te">వాస్తు శాంతి హోమం</li>
+                            <li class="lang-en">Griha pravesh rituals</li>
+                            <li class="lang-te">గృహ ప్రవేశ ఆచారాలు</li>
+                            <li class="lang-en">Blessings for prosperity</li>
+                            <li class="lang-te">ఐశ్వర్యం కోసం ఆశీర్వాదాలు</li>
+                        </ul>
+                        <button class="cta-button book-now-btn" data-service="Housewarming Complete Package">
+                            <span class="lang-en">Get Quote</span>
+                            <span class="lang-te">కోట్ పొందండి</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3 class="lang-en">Astrology + Muhurtham Combo</h3>
+                        <h3 class="lang-te">జ్యోతిష్యం + ముహూర్తం కాంబో</h3>
+                        <div class="package-price">Custom Quote</div>
+                    </div>
+                    <div class="package-content">
+                        <ul class="package-features">
+                            <li class="lang-en">Complete horoscope analysis</li>
+                            <li class="lang-te">సంపూర్ణ జాతక విశ్లేషణ</li>
+                            <li class="lang-en">Muhurtham selection service</li>
+                            <li class="lang-te">ముహూర్తం ఎంపిక సేవ</li>
+                            <li class="lang-en">Remedies and solutions</li>
+                            <li class="lang-te">పరిష్కారాలు మరియు సొల్యూషన్లు</li>
+                            <li class="lang-en">Personalized guidance</li>
+                            <li class="lang-te">వ్యక్తిగతీకరించిన మార్గదర్శకత్వం</li>
+                        </ul>
+                        <button class="cta-button book-now-btn" data-service="Astrology + Muhurtham Combo">
+                            <span class="lang-en">Get Quote</span>
+                            <span class="lang-te">కోట్ పొందండి</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="contact-modal">
+            <div class="modal-header">
+                <h3 class="lang-en">Book Your Service</h3>
+                <h3 class="lang-te">మీ సేవను బుక్ చేయండి</h3>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-content">
+                <div class="modal-service-name" id="modalServiceName">
+                    <!-- Service name will be inserted here -->
+                </div>
+                <div class="contact-options">
+                    <a href="tel:9848315831" class="contact-option">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 class="lang-en">Call Now</h4>
+                            <h4 class="lang-te">ఇప్పుడే కాల్ చేయండి</h4>
+                            <p class="lang-en">98483 15831</p>
+                            <p class="lang-te">98483 15831</p>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/919848315831" class="contact-option" target="_blank">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 class="lang-en">WhatsApp</h4>
+                            <h4 class="lang-te">వాట్సాప్</h4>
+                            <p class="lang-en">Send message for quick response</p>
+                            <p class="lang-te">శీఘ్ర ప్రతిస్పందన కోసం సందేశం పంపండి</p>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/918639168617" class="contact-option" target="_blank">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4 class="lang-en">Alternative WhatsApp</h4>
+                            <h4 class="lang-te">ప్రత్యామ్నాయ వాట్సాప్</h4>
+                            <p class="lang-en">86391 68617</p>
+                            <p class="lang-te">86391 68617</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="modal-footer">
+                    <p class="lang-en">We'll contact you within 30 minutes to discuss your requirements</p>
+                    <p class="lang-te">మీ అవసరాలను చర్చించడానికి మేము 30 నిమిషాలలో మిమ్మల్ని సంప్రదిస్తాము</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="lang-en">Pandit Services</h3>
+                    <h3 class="lang-te">పండిత్ సేవలు</h3>
+                    <p class="lang-en">Traditional Vedic rituals and ceremonies with 25+ years of experience</p>
+                    <p class="lang-te">25+ సంవత్సరాల అనుభవంతో సంప్రదాయ వేదిక ఆచారాలు మరియు వేడుకలు</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="lang-en">Contact Info</h3>
+                    <h3 class="lang-te">సంప్రదింపు సమాచారం</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span><strong>98483 15831</strong></span>
+                        </div>
+                          <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>
+                                <a href="mailto:indraganti369@gmail.com" style="color:white; text-decoration: none;">indraganti369@gmail.com</a>
+                            </span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="lang-en">Andhra Pradesh, India</span>
+                            <span class="lang-te">ఆంధ్రప్రదేశ్, భారతదేశం</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span class="lang-en">Available 24/7</span>
+                            <span class="lang-te">24/7 అందుబాటులో</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section quick-links">
+                    <h3 class="lang-en">Quick Links</h3>
+                    <h3 class="lang-te">త్వరిత లింకులు</h3>
+                    <p><a href="index.html">
+                        <span class="lang-en">Home</span>
+                        <span class="lang-te">హోమ్</span>
+                    </a></p>
+                    <p><a href="about.html">
+                        <span class="lang-en">About</span>
+                        <span class="lang-te">గురించి</span>
+                    </a></p>
+                    <p><a href="contact.html">
+                        <span class="lang-en">Contact</span>
+                        <span class="lang-te">సంప్రదించండి</span>
+                    </a></p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p class="lang-en">© 2023 Pandit Services. All rights reserved.</p>
+                <p class="lang-te">© 2023 పండిత్ సేవలు. అన్ని హక్కులు రక్షించబడినవి.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918639168617" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Call Floating Button -->
+    <a href="tel:9848315831" class="call-float">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <script>
+        // Language toggle functionality
+        document.getElementById('languageToggle').addEventListener('click', function() {
+            document.body.classList.toggle('telugu');
+            
+            // Update button text
+            if (document.body.classList.contains('telugu')) {
+                this.innerHTML = 'English';
+            } else {
+                this.innerHTML = 'తెలుగు';
+            }
+        });
+        
+        // Navbar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('nav-active'));
+                    // Add active class to clicked link
+                    this.classList.add('nav-active');
+                });
+            });
+        });
+
+        // Contact Modal Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('contactModal');
+            const closeModal = document.getElementById('closeModal');
+            const bookNowButtons = document.querySelectorAll('.book-now-btn');
+            const modalServiceName = document.getElementById('modalServiceName');
+
+            // Function to open modal
+            function openModal(serviceName) {
+                modalServiceName.textContent = serviceName;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Function to close modal
+            function closeModalFunc() {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+
+            // Add event listeners to all Book Now buttons
+            bookNowButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const serviceName = this.getAttribute('data-service');
+                    openModal(serviceName);
+                });
+            });
+
+            // Close modal when clicking close button
+            closeModal.addEventListener('click', closeModalFunc);
+
+            // Close modal when clicking outside the modal
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModalFunc();
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModalFunc();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

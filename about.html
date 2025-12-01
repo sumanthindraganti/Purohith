@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Our Purohit | శ్రీ ఇంద్రగంటి శ్రీనివాస శర్మ గారు</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* Base Styles */
+      :root {
+        --bg-color: #fff8e1; /* Light cream */
+        --text-color: #5d4037; /* Dark brown */
+        --heading-color: #e65100; /* Saffron orange */
+        --accent-color: #c62828; /* Red */
+        --gold: #ffb300; /* Temple gold */
+        --light-gold: #ffecb3;
+        --temple-red: #b71c1c;
+        --vibrant-orange: #ff6f00;
+        --vibrant-yellow: #ffca28;
+        --vibrant-red: #d32f2f;
+        --vibrant-green: #388e3c;
+        --vibrant-blue: #1976d2;
+        --vibrant-purple: #7b1fa2;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", "Noto Sans Telugu", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header Styles */
+      header {
+        background: linear-gradient(
+          135deg,
+          var(--vibrant-orange),
+          var(--vibrant-red)
+        );
+        color: white;
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+        animation: headerSlideDown 0.8s ease-out;
+      }
+
+      @keyframes headerSlideDown {
+        0% {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo h1 {
+        font-size: 1.5rem;
+        margin-left: 10px;
+      }
+
+      .logo-icon {
+        font-size: 2rem;
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav li {
+        margin-left: 1.5rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s;
+        padding: 5px 10px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      nav a::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--vibrant-yellow);
+        transition: width 0.3s ease;
+      }
+
+      nav a:hover::before {
+        width: 100%;
+      }
+
+      nav a:hover {
+        color: var(--vibrant-yellow);
+      }
+
+      .nav-active {
+        color: var(--vibrant-yellow);
+        position: relative;
+      }
+
+      .nav-active::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--vibrant-yellow);
+      }
+
+      .language-toggle {
+        margin-left: 20px;
+        background: transparent;
+        border: 1px solid white;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .language-toggle::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .language-toggle:hover::before {
+        left: 100%;
+      }
+
+      .language-toggle:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .mobile-menu {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("BG-IMG2.jpeg") center/cover;
+        color: white;
+        text-align: center;
+        padding: 5rem 1rem;
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: heroFadeIn 1.2s ease-out;
+      }
+
+      @keyframes heroFadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+        animation: contentSlideUp 1s ease-out 0.5s both;
+      }
+
+      @keyframes contentSlideUp {
+        0% {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .hero h2 {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+        color: var(--vibrant-yellow);
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        animation: textGlow 3s infinite alternate;
+      }
+
+      @keyframes textGlow {
+        0% {
+          text-shadow: 0 0 5px rgba(255, 202, 40, 0.5);
+        }
+        100% {
+          text-shadow: 0 0 20px rgba(255, 202, 40, 0.8),
+            0 0 30px rgba(255, 202, 40, 0.6);
+        }
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: linear-gradient(
+          135deg,
+          var(--vibrant-red),
+          var(--vibrant-orange)
+        );
+        color: white;
+        padding: 14px 35px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s;
+        border: none;
+        cursor: pointer;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        margin: 0.5rem;
+        position: relative;
+        overflow: hidden;
+        animation: buttonPulse 2s infinite;
+      }
+
+      @keyframes buttonPulse {
+        0% {
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        50% {
+          box-shadow: 0 4px 20px rgba(230, 81, 0, 0.6);
+        }
+        100% {
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      .cta-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .cta-button:hover::before {
+        left: 100%;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .cta-button i {
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .cta-button.secondary {
+        background: transparent;
+        border: 2px solid white;
+        animation: none;
+      }
+
+      .cta-button.secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      /* About Section */
+      .about-section {
+        padding: 4rem 0;
+        background: linear-gradient(135deg, var(--bg-color), #fff5e6);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 3rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .about-text {
+        flex: 1;
+        min-width: 300px;
+        animation: fadeInLeft 1s ease-out;
+      }
+
+      @keyframes fadeInLeft {
+        0% {
+          transform: translateX(-50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      .about-image {
+        flex: 1;
+        min-width: 300px;
+        text-align: center;
+        position: relative;
+        animation: fadeInRight 1s ease-out;
+      }
+
+      @keyframes fadeInRight {
+        0% {
+          transform: translateX(50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      .pandit-photo-container {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .pandit-photo {
+        width: 100%;
+        height: 500px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+        border: 3px solid var(--vibrant-yellow);
+        transition: all 0.4s ease;
+        background: transparent;
+      }
+
+      .pandit-photo:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      .pandit-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        transition: transform 0.5s ease;
+        background: transparent;
+      }
+
+      .pandit-image:hover {
+        transform: scale(1.03);
+      }
+
+      .photo-caption {
+        margin-top: 1.5rem;
+        text-align: center;
+        padding: 1.5rem;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 202, 40, 0.15),
+          rgba(255, 111, 0, 0.15)
+        );
+        border-radius: 10px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        animation: captionPulse 3s infinite alternate;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+        border-image: linear-gradient(
+            45deg,
+            var(--vibrant-yellow),
+            var(--vibrant-orange)
+          )
+          1;
+      }
+
+      @keyframes captionPulse {
+        0% {
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+        100% {
+          box-shadow: 0 6px 25px rgba(255, 179, 0, 0.2);
+        }
+      }
+
+      .photo-caption p {
+        margin: 0.5rem 0;
+        font-weight: 600;
+        color: var(--text-color);
+      }
+
+      .photo-caption .lang-en {
+        font-size: 1.3rem;
+        color: var(--vibrant-orange);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .photo-caption .lang-te {
+        font-size: 1.1rem;
+        color: var(--vibrant-red);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: var(--vibrant-orange);
+        position: relative;
+        font-size: 2.2rem;
+        animation: titleFadeIn 1s ease-out;
+      }
+
+      @keyframes titleFadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .section-title:after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(
+          to right,
+          var(--vibrant-red),
+          var(--vibrant-yellow)
+        );
+        margin: 15px auto;
+        border-radius: 2px;
+        animation: lineExtend 1s ease-out 0.5s both;
+      }
+
+      @keyframes lineExtend {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100px;
+        }
+      }
+
+      /* Bio Details Section */
+      .bio-details {
+        padding: 4rem 0;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .bio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2.5rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .bio-card {
+        background-color: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s;
+        position: relative;
+        border-top: 4px solid var(--vibrant-yellow);
+        animation: cardFadeIn 0.8s ease-out;
+        animation-fill-mode: both;
+      }
+
+      .bio-card:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .bio-card:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .bio-card:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .bio-card:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes cardFadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .bio-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .bio-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 179, 0, 0.05),
+          rgba(230, 81, 0, 0.05)
+        );
+        z-index: 1;
+      }
+
+      .bio-icon {
+        background: transparent;
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+        border-bottom: 3px solid var(--vibrant-yellow);
+      }
+
+      .bio-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.5s ease;
+        display: block;
+        background: transparent;
+      }
+
+      .bio-card:hover .bio-icon img {
+        transform: scale(1.05);
+      }
+
+      .bio-content {
+        padding: 2rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .bio-content h3 {
+        color: var(--vibrant-orange);
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+      }
+
+      .bio-content p {
+        color: var(--text-color);
+        margin-bottom: 1.5rem;
+      }
+
+      /* Image Slider Section - UPDATED */
+      .slider-section {
+        padding: 5rem 0;
+        background: linear-gradient(135deg, #fff5e6, var(--bg-color));
+        position: relative;
+        overflow: hidden;
+      }
+
+      .slider-container {
+        max-width: 900px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        animation: sliderContainerAppear 1s ease-out;
+      }
+
+      @keyframes sliderContainerAppear {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .slider {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+      }
+
+      .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0.2)
+        );
+      }
+
+      .slide.active {
+        opacity: 1;
+      }
+
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s ease;
+        background: transparent;
+      }
+
+      .slide:hover img {
+        transform: scale(1.03);
+      }
+
+      /* Remove caption styles */
+
+      .slider-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        transform: translateY(-50%);
+        z-index: 10;
+      }
+
+      .slider-btn {
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .slider-btn:hover {
+        background: var(--vibrant-orange);
+        transform: scale(1.1);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+      }
+
+      .slider-dots {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        z-index: 10;
+      }
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .dot.active {
+        background: var(--vibrant-yellow);
+        transform: scale(1.3);
+        border-color: white;
+      }
+
+      .dot:hover {
+        background: var(--vibrant-orange);
+        transform: scale(1.2);
+      }
+
+      /* Quote Section */
+      .quote-section {
+        padding: 4rem 0;
+        background: linear-gradient(135deg, #fff5e6, var(--bg-color));
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .quote-card {
+        background-color: white;
+        padding: 3rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+        border-left: 5px solid var(--vibrant-yellow);
+        animation: cardFadeIn 0.8s ease-out;
+        transition: all 0.4s ease;
+      }
+
+      .quote-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .quote-text {
+        font-size: 1.5rem;
+        font-style: italic;
+        color: var(--text-color);
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+
+      .quote-text::before {
+        content: '"';
+        font-size: 4rem;
+        color: var(--vibrant-yellow);
+        position: absolute;
+        top: -30px;
+        left: -20px;
+        opacity: 0.3;
+      }
+
+      .quote-author {
+        font-size: 1.2rem;
+        color: var(--vibrant-orange);
+        font-weight: 600;
+      }
+
+      /* Expertise Section */
+      .expertise-section {
+        padding: 4rem 0;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .expertise-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .expertise-card {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s;
+        border-left: 4px solid var(--vibrant-yellow);
+        animation: featureFadeIn 0.8s ease-out;
+        animation-fill-mode: both;
+      }
+
+      .expertise-card:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .expertise-card:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .expertise-card:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .expertise-card:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes featureFadeIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .expertise-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .expertise-icon {
+        font-size: 2.5rem;
+        color: var(--vibrant-orange);
+        margin-bottom: 1rem;
+        animation: iconBounce 2s infinite;
+      }
+
+      @keyframes iconBounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .expertise-card h3 {
+        color: var(--vibrant-orange);
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      /* Values Section */
+      .values-section {
+        padding: 4rem 0;
+        background: linear-gradient(135deg, #fff5e6, var(--bg-color));
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Footer */
+      footer {
+        background: linear-gradient(135deg, var(--text-color), #3e2723);
+        color: white;
+        padding: 3rem 0 1.5rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .footer-section {
+        flex: 1;
+        min-width: 250px;
+      }
+
+      .footer-section h3 {
+        color: var(--vibrant-yellow);
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      /* Quick Links */
+      .quick-links p {
+        margin-bottom: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .quick-links a {
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .quick-links a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 202, 40, 0.2),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+
+      .quick-links a:hover::before {
+        left: 100%;
+      }
+
+      .quick-links a:hover {
+        color: var(--vibrant-yellow);
+        transform: translateX(5px);
+        background-color: rgba(255, 202, 40, 0.1);
+      }
+
+      /* Quick Links Icon Animation */
+      .quick-links a::after {
+        content: "→";
+        position: absolute;
+        right: -20px;
+        opacity: 0;
+        transition: all 0.3s ease;
+        color: var(--vibrant-yellow);
+      }
+
+      .quick-links a:hover::after {
+        right: 5px;
+        opacity: 1;
+      }
+
+      .copyright {
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+        opacity: 0.8;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* WhatsApp Button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        text-decoration: none;
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        transition: all 0.3s;
+        animation: pulse 2s infinite, bounce 3s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Call Button */
+      .call-float {
+        position: fixed;
+        bottom: 25px;
+        left: 25px;
+        text-decoration: none;
+        background: linear-gradient(135deg, var(--vibrant-green), #2e7d32);
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        transition: all 0.3s;
+        animation: pulse 2s infinite, bounce 3s infinite 1s;
+      }
+
+      .call-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
+
+      /* Language toggle */
+      .lang-en {
+        display: block;
+      }
+
+      .lang-te {
+        display: none;
+      }
+
+      body.telugu .lang-en {
+        display: none;
+      }
+
+      body.telugu .lang-te {
+        display: block;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .header-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        nav ul {
+          margin-top: 1rem;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        nav li {
+          margin: 0.5rem;
+        }
+
+        .hero {
+          min-height: 50vh;
+          padding: 3rem 1rem;
+        }
+
+        .hero h2 {
+          font-size: 2.2rem;
+        }
+
+        .hero p {
+          font-size: 1.1rem;
+        }
+
+        .mobile-menu {
+          display: block;
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+        }
+
+        .mobile-nav {
+          display: none;
+          width: 100%;
+          text-align: center;
+          margin-top: 1rem;
+        }
+
+        .mobile-nav.active {
+          display: block;
+        }
+
+        .mobile-nav ul {
+          flex-direction: column;
+        }
+
+        .mobile-nav li {
+          margin: 0.5rem 0;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .pandit-photo {
+          height: 400px;
+        }
+
+        .bio-icon {
+          height: 180px;
+        }
+
+        .cta-button {
+          display: flex;
+          margin: 1rem auto;
+          width: 80%;
+          max-width: 250px;
+        }
+
+        /* Responsive slider */
+        .slider {
+          height: 350px;
+        }
+
+        .slider-btn {
+          width: 40px;
+          height: 40px;
+          font-size: 1.2rem;
+        }
+
+        /* Responsive quick links */
+        .quick-links a {
+          padding: 8px 15px;
+          display: block;
+          margin-bottom: 0.8rem;
+        }
+
+        .quick-links a::after {
+          right: -25px;
+        }
+
+        .quick-links a:hover::after {
+          right: 10px;
+        }
+      }
+
+      /* Temple decorative elements */
+      .temple-border {
+        height: 10px;
+        background: linear-gradient(
+          to right,
+          var(--vibrant-yellow),
+          var(--vibrant-orange),
+          var(--vibrant-red),
+          var(--vibrant-orange),
+          var(--vibrant-yellow)
+        );
+        margin: 2rem 0;
+        animation: borderFlow 3s infinite linear;
+        background-size: 200% 100%;
+      }
+
+      @keyframes borderFlow {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 200% 50%;
+        }
+      }
+
+      /* Divider style */
+      .divider {
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          var(--vibrant-orange),
+          transparent
+        );
+        margin: 2rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-content">
+        <div class="logo">
+          <div class="logo-icon">🛕</div>
+          <h1 class="lang-en">Pandit Services</h1>
+          <h1 class="lang-te">పండిత్ సేవలు</h1>
+        </div>
+
+        <nav class="desktop-nav">
+          <ul>
+            <li>
+              <a href="index.html">
+                <span class="lang-en">Home</span>
+                <span class="lang-te">హోమ్</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html">
+                <span class="lang-en">Services</span>
+                <span class="lang-te">సేవలు</span>
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="nav-active">
+                <span class="lang-en">About</span>
+                <span class="lang-te">గురించి</span>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html">
+                <span class="lang-en">Contact</span>
+                <span class="lang-te">సంప్రదించండి</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="language-toggle" id="languageToggle">
+          <span class="lang-en">తెలుగు</span>
+          <span class="lang-te">English</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2 class="lang-en">About Sri Indraganti Srinivasa Sarma Garu</h2>
+        <h2 class="lang-te">శ్రీ ఇంద్రగంటి శ్రీనివాస శర్మ గారి గురించి</h2>
+
+        <p class="lang-en">
+          Vedic Purohit, Astrology & Ritual Specialist with 25+ Years of
+          Experience
+        </p>
+        <p class="lang-te">
+          25+ సంవత్సరాల అనుభవంతో కూడిన వేదిక పూరోహిత, జ్యోతిష్య & ఆచార నిపుణులు
+        </p>
+
+        <div class="hero-buttons">
+          <a href="tel:9848315831" class="cta-button">
+            <i class="fas fa-phone"></i>
+            <span class="lang-en">Consult Now</span>
+            <span class="lang-te">ఇప్పుడే సంప్రదించండి</span>
+          </a>
+          <a href="https://wa.me/918639168617" class="cta-button secondary">
+            <i class="fab fa-whatsapp"></i>
+            <span class="lang-en">WhatsApp</span>
+            <span class="lang-te">వాట్సాప్</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2 class="section-title lang-en">Our Purohit</h2>
+            <h2 class="section-title lang-te">మా పూరోహితులు</h2>
+
+            <p class="lang-en">
+              Sri Indraganti Srinivasa Sarma Garu comes from a traditional
+              Brahmin family with generations of Vedic knowledge and spiritual
+              practice. His journey began at a young age under the guidance of
+              his father and grandfather, who were renowned Vedic scholars.
+            </p>
+            <p class="lang-te">
+              శ్రీ ఇంద్రగంటి శ్రీనివాస శర్మ గారు తరాలు గడిచిన వేదిక జ్ఞానం మరియు
+              ఆధ్యాత్మిక అభ్యాసం కలిగిన సంప్రదాయ బ్రాహ్మణ కుటుంబం నుండి వచ్చారు.
+              ప్రసిద్ధ వేదిక పండితులైన తన తండ్రి మరియు తాతగారి మార్గదర్శకత్వంలో
+              చిన్న వయస్సులోనే అతని ప్రయాణం ప్రారంభమైంది.
+            </p>
+
+            <p class="lang-en">
+              With over 25 years of dedicated service, he has performed
+              countless rituals, ceremonies, and spiritual consultations,
+              bringing authentic Vedic traditions to families across South
+              India.
+            </p>
+            <p class="lang-te">
+              25 సంవత్సరాలకు పైగా అంకితభావంతో సేవ చేస్తున్న ఆయన, దక్షిణ భారతదేశం
+              అంతటా ఉన్న కుటుంబాలకు ప్రామాణిక వేదిక సంప్రదాయాలను తీసుకువెళ్లి,
+              అసంఖ్యాకమైన ఆచారాలు, వేడుకలు మరియు ఆధ్యాత్మిక సలహాలు ఇచ్చారు.
+            </p>
+
+            <div class="divider"></div>
+
+            <div style="margin-top: 2rem; text-align: center">
+              <a href="tel:9848315831" class="cta-button">
+                <i class="fas fa-phone"></i>
+                <span class="lang-en">Consult Now</span>
+                <span class="lang-te">ఇప్పుడే సంప్రదించండి</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="about-image">
+            <div class="pandit-photo-container">
+              <div class="pandit-photo">
+                <img
+                  src="Profile_img2.jpg"
+                  alt="Sri Indraganti Srinivasa Sarma Garu in traditional attire"
+                  class="pandit-image"
+                />
+              </div>
+              <div class="photo-caption">
+                <p class="lang-en">Sri Indraganti Srinivasa Sarma Garu</p>
+                <p class="lang-te">శ్రీ ఇంద్రగంటి శ్రీనివాస శర్మ గారు</p>
+                <p class="lang-en">Vedic Purohit & Ritual Specialist</p>
+                <p class="lang-te">వేదిక పూరోహిత & ఆచార నిపుణులు</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="temple-border"></div>
+
+    <!-- Bio Details Section -->
+    <section class="bio-details">
+      <div class="container">
+        <h2 class="section-title lang-en">Background & Qualifications</h2>
+        <h2 class="section-title lang-te">నేపథ్యం & అర్హతలు</h2>
+
+        <div class="bio-grid">
+          <div class="bio-card">
+            <div class="bio-icon">
+              <img
+                src="/Pooja-Pics/family-Background.png"
+                alt="Family Background"
+              />
+            </div>
+            <div class="bio-content">
+              <h3 class="lang-en">Family Background</h3>
+              <h3 class="lang-te">కుటుంబ నేపథ్యం</h3>
+              <p class="lang-en">
+                Born into a traditional Brahmin family with 5 generations of
+                Vedic scholarship and spiritual practice.
+              </p>
+              <p class="lang-te">
+                5 తరాల వేదిక పాండిత్యం మరియు ఆధ్యాత్మిక అభ్యాసం కలిగిన సంప్రదాయ
+                బ్రాహ్మణ కుటుంబంలో జన్మించారు.
+              </p>
+            </div>
+          </div>
+
+          <div class="bio-card">
+            <div class="bio-icon">
+              <img
+                src="/Pooja-Pics/Education.jpeg"
+                alt="Education & Training"
+              />
+            </div>
+            <div class="bio-content">
+              <h3 class="lang-en">Education & Training</h3>
+              <h3 class="lang-te">విద్య & శిక్షణ</h3>
+              <p class="lang-en">
+                Formal education in Veda Pathashala, advanced studies in Vedic
+                astrology and ritual procedures.
+              </p>
+              <p class="lang-te">
+                వేద పాఠశాలలో అధికారిక విద్య, వేదిక జ్యోతిష్యం మరియు ఆచార
+                విధానాలలో అధునాతన అధ్యయనాలు.
+              </p>
+            </div>
+          </div>
+
+          <div class="bio-card">
+            <div class="bio-icon">
+              <img
+                src="/Pooja-Pics/Languages.jpeg"
+                alt="Languages"
+              />
+            </div>
+            <div class="bio-content">
+              <h3 class="lang-en">Languages</h3>
+              <h3 class="lang-te">భాషలు</h3>
+              <p class="lang-en">
+                Performs rituals in Telugu, Sanskrit, Hindi, and Tamil with
+                authentic pronunciation and meaning.
+              </p>
+              <p class="lang-te">
+                తెలుగు, సంస్కృతం, హిందీ మరియు తమిళంలో ప్రామాణిక ఉచ్చారణ మరియు
+                అర్థంతో ఆచారాలు నిర్వహిస్తారు.
+              </p>
+            </div>
+          </div>
+
+          <div class="bio-card">
+            <div class="bio-icon">
+              <img
+                src="/Pooja-Pics/All-States.jpeg"
+                alt="Areas Served"
+              />
+            </div>
+            <div class="bio-content">
+              <h3 class="lang-en">Areas Served</h3>
+              <h3 class="lang-te">సేవా ప్రాంతాలు</h3>
+              <p class="lang-en">
+                Andhra Pradesh, Telangana, Karnataka, Tamil Nadu, and other
+                states across India.
+              </p>
+              <p class="lang-te">
+                ఆంధ్రప్రదేశ్, తెలంగాణ, కర్ణాటక, తమిళనాడు మరియు భారతదేశం అంతటా
+                ఇతర రాష్ట్రాలు.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Slider Section - UPDATED WITH WORKING SLIDER -->
+    <section class="slider-section">
+      <div class="container">
+        <h2 class="section-title lang-en">Our Rituals & Ceremonies</h2>
+        <h2 class="section-title lang-te">మా ఆచారాలు & వేడుకలు</h2>
+
+        <div class="slider-container">
+          <div class="slider" id="imageSlider">
+            <div class="slide active">
+              <img
+                src="/Photos-1-001/IMG-1.JPG"
+                alt="Sri Indraganti Srinivasa Sarma Garu"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/Photos-1-001/IMG-2.JPG"
+                alt="Sri Indraganti Srinivasa Sarma Garus"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/Photos-1-001/IMG-3.jpg"
+                alt="Sri Indraganti Srinivasa Sarma Garu"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/Photos-1-001/IMG_4.jpg"
+                alt="Sri Indraganti Srinivasa Sarma Garu"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/Photos-1-001/IMG-5.JPG"
+                alt="Sri Indraganti Srinivasa Sarma Garu"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/Photos-1-001/IMG-6.JPG"
+                alt="Sri Indraganti Srinivasa Sarma Garu"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/Photos-1-001/IMG-7.jpg"
+                alt="Sri Indraganti Srinivasa Sarma Garu"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/Photos-1-001/IMG-8.JPG"
+                alt="Sri Indraganti Srinivasa Sarma Garu"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/Photos-1-001/IMG-9.jpg"
+                alt="Sri Indraganti Srinivasa Sarma Garu"
+              />
+            </div>
+          </div>
+
+          <div class="slider-nav">
+            <button class="slider-btn prev-btn"   id="prevBtn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn next-btn" id="nextBtn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <div class="slider-dots" id="sliderDots">
+            <!-- Dots will be inserted by JavaScript -->
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem">
+          <a href="services.html" class="cta-button">
+            <i class="fas fa-calendar-alt"></i>
+            <span class="lang-en">View All Services</span>
+            <span class="lang-te">అన్ని సేవలను వీక్షించండి</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="expertise-section">
+      <div class="container">
+        <h2 class="section-title lang-en">Special Expertise</h2>
+        <h2 class="section-title lang-te">ప్రత్యేక నైపుణ్యం</h2>
+
+        <div class="expertise-grid">
+          <div class="expertise-card">
+            <div class="expertise-icon">🕉️</div>
+            <h3 class="lang-en">Vedic Chanting</h3>
+            <h3 class="lang-te">వేదిక జపం</h3>
+            <p class="lang-en">
+              Authentic Vedic mantras with proper pronunciation and rhythm
+            </p>
+            <p class="lang-te">
+              సరైన ఉచ్చారణ మరియు లయతో ప్రామాణిక వేదిక మంత్రాలు
+            </p>
+          </div>
+
+          <div class="expertise-card">
+            <div class="expertise-icon">📅</div>
+            <h3 class="lang-en">Muhurtham & Astrology</h3>
+            <h3 class="lang-te">ముహూర్తం & జ్యోతిష్యం</h3>
+            <p class="lang-en">
+              Auspicious timing selection and astrological guidance
+            </p>
+            <p class="lang-te">
+              శుభమైన సమయం ఎంపిక మరియు జ్యోతిష్య మార్గదర్శకత్వం
+            </p>
+          </div>
+
+          <div class="expertise-card">
+            <div class="expertise-icon">🔥</div>
+            <h3 class="lang-en">Homam Preparations</h3>
+            <h3 class="lang-te">హోమం తయారీలు</h3>
+            <p class="lang-en">
+              Complete fire ritual preparations with authentic methods
+            </p>
+            <p class="lang-te">
+              ప్రామాణిక పద్ధతులతో సంపూర్ణ అగ్ని ఆచార తయారీలు
+            </p>
+          </div>
+
+          <div class="expertise-card">
+            <div class="expertise-icon">📜</div>
+            <h3 class="lang-en">Jatakalu Writing</h3>
+            <h3 class="lang-te">జాతకాలు రాయడం</h3>
+            <p class="lang-en">
+              Professional horoscope preparation and analysis
+            </p>
+            <p class="lang-te">ప్రొఫెషనల్ జాతక తయారీ మరియు విశ్లేషణ</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+      <div class="container">
+        <div class="quote-card">
+          <div class="quote-text lang-en">
+            "Pooja done with proper mantras and faith brings divine blessings."
+          </div>
+          <div class="quote-text lang-te">
+            "సరైన మంత్రాలు మరియు విశ్వాసంతో చేసిన పూజ దైవిక ఆశీర్వాదాలను
+            తెస్తుంది."
+          </div>
+          <div class="quote-author lang-en">
+            - Sri Indraganti Srinivasa Sarma Garu
+          </div>
+          <div class="quote-author lang-te">
+            - శ్రీ ఇంద్రగంటి శ్రీనివాస శర్మ గారు
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section expertise-section">
+      <div class="container">
+        <h2 class="section-title lang-en">Core Values & Beliefs</h2>
+        <h2 class="section-title lang-te">ప్రధాన విలువలు & నమ్మకాలు</h2>
+
+        <div class="expertise-grid">
+          <div class="expertise-card">
+            <div class="expertise-icon">🌿</div>
+            <h3 class="lang-en">Authentic Traditions</h3>
+            <h3 class="lang-te">ప్రామాణిక సంప్రదాయాలు</h3>
+            <p class="lang-en">
+              Following genuine Vedic traditions without shortcuts
+            </p>
+            <p class="lang-te">
+              సత్వరమార్గాలు లేకుండా నిజమైన వేదిక సంప్రదాయాలను అనుసరించడం
+            </p>
+          </div>
+
+          <div class="expertise-card">
+            <div class="expertise-icon">🧘</div>
+            <h3 class="lang-en">Spiritual Discipline</h3>
+            <h3 class="lang-te">ఆధ్యాత్మిక క్రమశిక్షణ</h3>
+            <p class="lang-en">
+              Maintaining purity and discipline in all rituals
+            </p>
+            <p class="lang-te">
+              అన్ని ఆచారాలలో పవిత్రత మరియు క్రమశిక్షణను కాపాడటం
+            </p>
+          </div>
+
+          <div class="expertise-card">
+            <div class="expertise-icon">📖</div>
+            <h3 class="lang-en">Correct Procedures</h3>
+            <h3 class="lang-te">సరైన విధానాలు</h3>
+            <p class="lang-en">
+              Ensuring proper mantras and procedures as per scriptures
+            </p>
+            <p class="lang-te">
+              శాస్త్రాల ప్రకారం సరైన మంత్రాలు మరియు విధానాలను నిర్ధారించడం
+            </p>
+          </div>
+
+          <div class="expertise-card">
+            <div class="expertise-icon">✨</div>
+            <h3 class="lang-en">Divine Blessings</h3>
+            <h3 class="lang-te">దైవిక ఆశీర్వాదాలు</h3>
+            <p class="lang-en">
+              Focus on bringing positive energy and blessings
+            </p>
+            <p class="lang-te">
+              సానుకూల శక్తి మరియు ఆశీర్వాదాలను తీసుకురావడంపై దృష్టి
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="lang-en">Pandit Services</h3>
+            <h3 class="lang-te">పండిత్ సేవలు</h3>
+            <p class="lang-en">
+              Traditional Vedic rituals and ceremonies with 25+ years of
+              experience
+            </p>
+            <p class="lang-te">
+              25+ సంవత్సరాల అనుభవంతో సంప్రదాయ వేదిక ఆచారాలు మరియు వేడుకలు
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="lang-en">Contact Info</h3>
+            <h3 class="lang-te">సంప్రదింపు సమాచారం</h3>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span><strong>98483 15831</strong></span>
+              </div>
+                <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>
+                                <a href="mailto:indraganti369@gmail.com" style="color:white; text-decoration: none;">indraganti369@gmail.com</a>
+                            </span>
+                        </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="lang-en">Andhra Pradesh, India</span>
+                <span class="lang-te">ఆంధ్రప్రదేశ్, భారతదేశం</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <span class="lang-en">Available 24/7</span>
+                <span class="lang-te">24/7 అందుబాటులో</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-section quick-links">
+            <h3 class="lang-en">Quick Links</h3>
+            <h3 class="lang-te">త్వరిత లింకులు</h3>
+            <p>
+              <a href="index.html">
+                <span class="lang-en">Home</span>
+                <span class="lang-te">హోమ్</span>
+              </a>
+            </p>
+            <p>
+              <a href="services.html">
+                <span class="lang-en">Services</span>
+                <span class="lang-te">సేవలు</span>
+              </a>
+            </p>
+            <p>
+              <a href="contact.html">
+                <span class="lang-en">Contact</span>
+                <span class="lang-te">సంప్రదించండి</span>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p class="lang-en">© 2023 Pandit Services. All rights reserved.</p>
+          <p class="lang-te">
+            © 2023 పండిత్ సేవలు. అన్ని హక్కులు రక్షించబడినవి.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918639168617" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Call Floating Button -->
+    <a href="tel:9848315831" class="call-float">
+      <i class="fas fa-phone"></i>
+    </a>
+
+    <script>
+      // Language toggle functionality
+      document
+        .getElementById("languageToggle")
+        .addEventListener("click", function () {
+          document.body.classList.toggle("telugu");
+
+          // Update button text
+          if (document.body.classList.contains("telugu")) {
+            this.innerHTML = "English";
+          } else {
+            this.innerHTML = "తెలుగు";
+          }
+        });
+
+      // Navbar active state management
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("nav a");
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            // Remove active class from all links
+            navLinks.forEach((l) => l.classList.remove("nav-active"));
+            // Add active class to clicked link
+            this.classList.add("nav-active");
+          });
+        });
+
+        // Initialize image slider
+        initImageSlider();
+      });
+
+      // Image Slider Functionality - FIXED
+      function initImageSlider() {
+        const slider = document.getElementById("imageSlider");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const dotsContainer = document.getElementById("sliderDots");
+
+        // Get all slides
+        const slides = document.querySelectorAll(".slider .slide");
+
+        if (slides.length === 0) {
+          console.error("No slides found!");
+          return;
+        }
+
+        let currentSlide = 0;
+        let slideInterval;
+
+        // Create dots
+        slides.forEach((slide, index) => {
+          const dot = document.createElement("div");
+          dot.className = `dot ${index === 0 ? "active" : ""}`;
+          dot.addEventListener("click", () => goToSlide(index));
+          dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll(".dot");
+
+        // Function to show slide
+        function showSlide(index) {
+          // Hide all slides
+          slides.forEach((slide) => slide.classList.remove("active"));
+          dots.forEach((dot) => dot.classList.remove("active"));
+
+          // Show current slide
+          slides[index].classList.add("active");
+          dots[index].classList.add("active");
+
+          currentSlide = index;
+        }
+
+        // Function to go to next slide
+        function nextSlide() {
+          let newIndex = currentSlide + 1;
+          if (newIndex >= slides.length) {
+            newIndex = 0;
+          }
+          showSlide(newIndex);
+        }
+
+        // Function to go to previous slide
+        function prevSlide() {
+          let newIndex = currentSlide - 1;
+          if (newIndex < 0) {
+            newIndex = slides.length - 1;
+          }
+          showSlide(newIndex);
+        }
+
+        // Function to go to specific slide
+        function goToSlide(index) {
+          if (index >= 0 && index < slides.length) {
+            showSlide(index);
+            resetAutoSlide();
+          }
+        }
+
+        // Function to start automatic sliding
+        function startAutoSlide() {
+          clearInterval(slideInterval); // Clear any existing interval
+          slideInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
+        }
+
+        // Function to stop automatic sliding
+        function stopAutoSlide() {
+          clearInterval(slideInterval);
+        }
+
+        // Function to reset automatic sliding
+        function resetAutoSlide() {
+          stopAutoSlide();
+          startAutoSlide();
+        }
+
+        // Event listeners for buttons
+        if (prevBtn) {
+          prevBtn.addEventListener("click", () => {
+            prevSlide();
+            resetAutoSlide();
+          });
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener("click", () => {
+            nextSlide();
+            resetAutoSlide();
+          });
+        }
+
+        // Start automatic sliding on page load
+        startAutoSlide();
+
+        // Pause on hover
+        if (slider) {
+          slider.addEventListener("mouseenter", stopAutoSlide);
+          slider.addEventListener("mouseleave", startAutoSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowLeft") {
+            prevSlide();
+            resetAutoSlide();
+          }
+          if (e.key === "ArrowRight") {
+            nextSlide();
+            resetAutoSlide();
+          }
+        });
+
+        // Pause when tab is not visible
+        document.addEventListener("visibilitychange", function() {
+          if (document.hidden) {
+            stopAutoSlide();
+          } else {
+            startAutoSlide();
+          }
+        });
+
+        // Initial slide show
+        showSlide(currentSlide);
+      }
+    </script>
+  </body>
+</html>

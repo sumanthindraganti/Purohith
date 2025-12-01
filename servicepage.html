@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Pandit Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        :root {
+            --bg-color: #fff8e1; /* Light cream */
+            --text-color: #5d4037; /* Dark brown */
+            --heading-color: #e65100; /* Saffron orange */
+            --accent-color: #c62828; /* Red */
+            --gold: #ffb300; /* Temple gold */
+            --light-gold: #ffecb3;
+            --temple-red: #b71c1c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', 'Noto Sans Telugu', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, var(--heading-color), var(--temple-red));
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            margin-left: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin-left: 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover, nav a.active {
+            color: var(--light-gold);
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .language-toggle {
+            margin-left: 20px;
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .language-toggle:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300"><rect width="1200" height="300" fill="%23ffb300"/><path d="M0,150 Q300,100 600,150 T1200,150 L1200,300 L0,300 Z" fill="%23e65100"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .page-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .page-header p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        /* Services Section */
+        .services-section {
+            padding: 2rem 0 4rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--heading-color);
+            position: relative;
+            font-size: 2.2rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent-color), var(--gold));
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .services-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+        
+        .service-item {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        
+        .service-image {
+            flex: 1;
+            min-width: 300px;
+            background: linear-gradient(135deg, var(--light-gold), var(--gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            font-size: 4rem;
+        }
+        
+        .service-content {
+            flex: 2;
+            min-width: 300px;
+            padding: 2.5rem;
+        }
+        
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-title {
+            color: var(--heading-color);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .book-button {
+            background: linear-gradient(to right, var(--accent-color), var(--temple-red));
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            white-space: nowrap;
+        }
+        
+        .book-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        .service-description {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .service-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .detail-card {
+            background-color: var(--light-gold);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .detail-card h4 {
+            color: var(--heading-color);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .detail-icon {
+            font-size: 1.2rem;
+        }
+        
+        /* Booking Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+        
+        .modal-title {
+            color: var(--heading-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            background: linear-gradient(to right, var(--accent-color), var(--temple-red));
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, var(--text-color), #3e2723);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .copyright {
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Language toggle */
+        .lang-en {
+            display: block;
+        }
+        
+        .lang-te {
+            display: none;
+        }
+        
+        body.telugu .lang-en {
+            display: none;
+        }
+        
+        body.telugu .lang-te {
+            display: block;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav li {
+                margin: 0.5rem;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .page-header p {
+                font-size: 1.1rem;
+            }
+            
+            .service-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .book-button {
+                align-self: flex-start;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+        
+        /* Temple decorative elements */
+        .temple-border {
+            height: 10px;
+            background: linear-gradient(to right, var(--gold), var(--heading-color), var(--accent-color), var(--heading-color), var(--gold));
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon">🛕</div>
+                <h1 class="lang-en">Pandit Services</h1>
+                <h1 class="lang-te">పండిత్ సేవలు</h1>
+            </div>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">
+                        <span class="lang-en">Home</span>
+                        <span class="lang-te">హోమ్</span>
+                    </a></li>
+                    <li><a href="services.html" class="active">
+                        <span class="lang-en">Services</span>
+                        <span class="lang-te">సేవలు</span>
+                    </a></li>
+                    <li><a href="about.html">
+                        <span class="lang-en">About</span>
+                        <span class="lang-te">గురించి</span>
+                    </a></li>
+                    <li><a href="contact.html">
+                        <span class="lang-en">Contact</span>
+                        <span class="lang-te">సంప్రదించండి</span>
+                    </a></li>
+                </ul>
+            </nav>
+            
+            <button class="language-toggle" id="languageToggle">
+                <span class="lang-en">తెలుగు</span>
+                <span class="lang-te">English</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="lang-en">Our Pooja Services</h1>
+            <h1 class="lang-te">మా పూజ సేవలు</h1>
+            <p class="lang-en">Comprehensive list of all traditional Hindu rituals and ceremonies</p>
+            <p class="lang-te">అన్ని సంప్రదాయ హిందూ ఆచారాలు మరియు వేడుకల సమగ్ర జాబితా</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title lang-en">Available Poojas & Ceremonies</h2>
+            <h2 class="section-title lang-te">అందుబాటులో ఉన్న పూజలు & వేడుకలు</h2>
+            
+            <div class="services-container">
+                <!-- Gruhapravesam -->
+                <div class="service-item">
+                    <div class="service-image">🏠</div>
+                    <div class="service-content">
+                        <div class="service-header">
+                            <div>
+                                <h3 class="service-title lang-en">Gruhapravesam</h3>
+                                <h3 class="service-title lang-te">గృహ ప్రవేశం</h3>
+                            </div>
+                            <button class="book-button" data-service="Gruhapravesam">
+                                <span class="lang-en">Book Now</span>
+                                <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                            </button>
+                        </div>
+                        <p class="service-description lang-en">House warming ceremony performed before occupying a new home to invoke blessings of deities for prosperity, peace, and happiness.</p>
+                        <p class="service-description lang-te">ఐశ్వర్యం, శాంతి మరియు సంతోషం కోసం దేవతల ఆశీర్వాదాలను పొందడానికి కొత్త ఇంటిని ఆక్రమించే ముందు నిర్వహించే గృహ ప్రవేశ వేడుక.</p>
+                        
+                        <div class="service-details">
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">📅</span> <span class="lang-en">When to Perform</span><span class="lang-te">ఎప్పుడు చేయాలి</span></h4>
+                                <p class="lang-en">Before moving into a new house, during auspicious muhurtham</p>
+                                <p class="lang-te">కొత్త ఇంటిలోకి తరలించే ముందు, శుభ ముహూర్తం సమయంలో</p>
+                            </div>
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">✨</span> <span class="lang-en">Benefits</span><span class="lang-te">ప్రయోజనాలు</span></h4>
+                                <p class="lang-en">Removes negative energies, brings prosperity and harmony</p>
+                                <p class="lang-te">నకారాత్మక శక్తులను తొలగిస్తుంది, ఐశ్వర్యం మరియు సామరస్యాన్ని తెస్తుంది</p>
+                            </div>
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">⏱️</span> <span class="lang-en">Duration</span><span class="lang-te">కాలపరిమితి</span></h4>
+                                <p class="lang-en">2-3 hours</p>
+                                <p class="lang-te">2-3 గంటలు</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vivaham -->
+                <div class="service-item">
+                    <div class="service-image">💍</div>
+                    <div class="service-content">
+                        <div class="service-header">
+                            <div>
+                                <h3 class="service-title lang-en">Vivaham</h3>
+                                <h3 class="service-title lang-te">వివాహం</h3>
+                            </div>
+                            <button class="book-button" data-service="Vivaham">
+                                <span class="lang-en">Book Now</span>
+                                <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                            </button>
+                        </div>
+                        <p class="service-description lang-en">Traditional Hindu wedding ceremony following Vedic rituals to sanctify the union of two souls for a lifelong partnership.</p>
+                        <p class="service-description lang-te">జీవితపూర్తి భాగస్వామ్యం కోసం రెండు ఆత్మల యూనియన్ను పవిత్రపరచడానికి వేదిక ఆచారాలను అనుసరించే సంప్రదాయ హిందూ వివాహ వేడుక.</p>
+                        
+                        <div class="service-details">
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">📅</span> <span class="lang-en">When to Perform</span><span class="lang-te">ఎప్పుడు చేయాలి</span></h4>
+                                <p class="lang-en">During auspicious wedding dates (muhurtham) as per Hindu calendar</p>
+                                <p class="lang-te">హిందూ క్యాలెండర్ ప్రకారం శుభవివాహ తేదీలలో (ముహూర్తం)</p>
+                            </div>
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">✨</span> <span class="lang-en">Benefits</span><span class="lang-te">ప్రయోజనాలు</span></h4>
+                                <p class="lang-en">Blessed marital life, prosperity, and spiritual growth</p>
+                                <p class="lang-te">ఆశీర్వదించిన వైవాహిక జీవితం, ఐశ్వర్యం మరియు ఆధ్యాత్మిక వృద్ధి</p>
+                            </div>
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">⏱️</span> <span class="lang-en">Duration</span><span class="lang-te">కాలపరిమితి</span></h4>
+                                <p class="lang-en">Full day ceremony with multiple rituals</p>
+                                <p class="lang-te">బహుళ ఆచారాలతో పూర్తి రోజు వేడుక</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Namakaranam -->
+                <div class="service-item">
+                    <div class="service-image">👶</div>
+                    <div class="service-content">
+                        <div class="service-header">
+                            <div>
+                                <h3 class="service-title lang-en">Namakaranam</h3>
+                                <h3 class="service-title lang-te">నామకరణం</h3>
+                            </div>
+                            <button class="book-button" data-service="Namakaranam">
+                                <span class="lang-en">Book Now</span>
+                                <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                            </button>
+                        </div>
+                        <p class="service-description lang-en">Baby naming ceremony where the newborn is given a name according to Hindu traditions and astrological considerations.</p>
+                        <p class="service-description lang-te">హిందూ సంప్రదాయాలు మరియు జ్యోతిష్య పరిశీలనల ప్రకారం నవజాత శిశువుకు పేరు పెట్టే వేడుక.</p>
+                        
+                        <div class="service-details">
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">📅</span> <span class="lang-en">When to Perform</span><span class="lang-te">ఎప్పుడు చేయాలి</span></h4>
+                                <p class="lang-en">11th or 21st day after birth, or during auspicious time</p>
+                                <p class="lang-te">పుట్టిన 11వ లేదా 21వ రోజు, లేదా శుభ సమయంలో</p>
+                            </div>
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">✨</span> <span class="lang-en">Benefits</span><span class="lang-te">ప్రయోజనాలు</span></h4>
+                                <p class="lang-en">Blessings for healthy growth and prosperous life</p>
+                                <p class="lang-te">ఆరోగ్యకరమైన వృద్ధి మరియు సంపన్న జీవితానికి ఆశీర్వాదాలు</p>
+                            </div>
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">⏱️</span> <span class="lang-en">Duration</span><span class="lang-te">కాలపరిమితి</span></h4>
+                                <p class="lang-en">1-2 hours</p>
+                                <p class="lang-te">1-2 గంటలు</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Upanayanam -->
+                <div class="service-item">
+                    <div class="service-image">📘</div>
+                    <div class="service-content">
+                        <div class="service-header">
+                            <div>
+                                <h3 class="service-title lang-en">Upanayanam</h3>
+                                <h3 class="service-title lang-te">ఉపనయనం</h3>
+                            </div>
+                            <button class="book-button" data-service="Upanayanam">
+                                <span class="lang-en">Book Now</span>
+                                <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                            </button>
+                        </div>
+                        <p class="service-description lang-en">Sacred thread ceremony marking the initiation of a young boy into student life and Vedic education.</p>
+                        <p class="service-description lang-te">యువకుడిని విద్యార్థి జీవితంలోకి మరియు వేదిక విద్యలోకి ప్రవేశపెట్టడాన్ని సూచించే పవిత్ర థ్రెడ్ వేడుక.</p>
+                        
+                        <div class="service-details">
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">📅</span> <span class="lang-en">When to Perform</span><span class="lang-te">ఎప్పుడు చేయాలి</span></h4>
+                                <p class="lang-en">Between ages 7-16, during auspicious time</p>
+                                <p class="lang-te">7-16 సంవత్సరాల మధ్య, శుభ సమయంలో</p>
+                            </div>
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">✨</span> <span class="lang-en">Benefits</span><span class="lang-te">ప్రయోజనాలు</span></h4>
+                                <p class="lang-en">Spiritual initiation, academic success, and character development</p>
+                                <p class="lang-te">ఆధ్యాత్మిక ప్రారంభం, అకడమిక్ విజయం మరియు పాత్ర అభివృద్ధి</p>
+                            </div>
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">⏱️</span> <span class="lang-en">Duration</span><span class="lang-te">కాలపరిమితి</span></h4>
+                                <p class="lang-en">3-4 hours</p>
+                                <p class="lang-te">3-4 గంటలు</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Satyanarayana Vratham -->
+                <div class="service-item">
+                    <div class="service-image">🪔</div>
+                    <div class="service-content">
+                        <div class="service-header">
+                            <div>
+                                <h3 class="service-title lang-en">Sri Satyanarayana Vratham</h3>
+                                <h3 class="service-title lang-te">శ్రీ సత్యనారాయణ వ్రతం</h3>
+                            </div>
+                            <button class="book-button" data-service="Sri Satyanarayana Vratham">
+                                <span class="lang-en">Book Now</span>
+                                <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                            </button>
+                        </div>
+                        <p class="service-description lang-en">Special pooja dedicated to Lord Satyanarayana (a form of Vishnu) performed for fulfillment of wishes and overall well-being.</p>
+                        <p class="service-description lang-te">కోరికల నెరవేర్పు మరియు మొత్తం శ్రేయస్సు కోసం నిర్వహించే లార్డ్ సత్యనారాయణ (విష్ణువు యొక్క రూపం)కు అంకితం చేయబడిన ప్రత్యేక పూజ.</p>
+                        
+                        <div class="service-details">
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">📅</span> <span class="lang-en">When to Perform</span><span class="lang-te">ఎప్పుడు చేయాలి</span></h4>
+                                <p class="lang-en">On full moon days (Purnima), special occasions, or to fulfill vows</p>
+                                <p class="lang-te">పూర్ణిమా రోజులలో, ప్రత్యేక సందర్భాలలో, లేదా ప్రతిజ్ఞలను నెరవేర్చడానికి</p>
+                            </div>
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">✨</span> <span class="lang-en">Benefits</span><span class="lang-te">ప్రయోజనాలు</span></h4>
+                                <p class="lang-en">Fulfillment of desires, removal of obstacles, and family harmony</p>
+                                <p class="lang-te">కోరికల నెరవేర్పు, అడ్డంకుల తొలగింపు మరియు కుటుంబ సామరస్యం</p>
+                            </div>
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">⏱️</span> <span class="lang-en">Duration</span><span class="lang-te">కాలపరిమితి</span></h4>
+                                <p class="lang-en">2-3 hours</p>
+                                <p class="lang-te">2-3 గంటలు</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Punya Vachana / Shanti Homam -->
+                <div class="service-item">
+                    <div class="service-image">🕉️</div>
+                    <div class="service-content">
+                        <div class="service-header">
+                            <div>
+                                <h3 class="service-title lang-en">Punya Vachana / Shanti Homam</h3>
+                                <h3 class="service-title lang-te">పుణ్య వచన / శాంతి హోమం</h3>
+                            </div>
+                            <button class="book-button" data-service="Punya Vachana / Shanti Homam">
+                                <span class="lang-en">Book Now</span>
+                                <span class="lang-te">ఇప్పుడే బుక్ చేయండి</span>
+                            </button>
+                        </div>
+                        <p class="service-description lang-en">Rituals performed for peace, prosperity, removing obstacles, and purification from negative influences.</p>
+                        <p class="service-description lang-te">శాంతి, ఐశ్వర్యం, అడ్డంకులను తొలగించడం మరియు నకారాత్మక ప్రభావాల నుండి శుద్ధి చేయడానికి నిర్వహించే ఆచారాలు.</p>
+                        
+                        <div class="service-details">
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">📅</span> <span class="lang-en">When to Perform</span><span class="lang-te">ఎప్పుడు చేయాలి</span></h4>
+                                <p class="lang-en">During difficult times, after negative events, or for general well-being</p>
+                                <p class="lang-te">కష్ట సమయాలలో, నకారాత్మక సంఘటనల తర్వాత, లేదా సాధారణ శ్రేయస్సు కోసం</p>
+                            </div>
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">✨</span> <span class="lang-en">Benefits</span><span class="lang-te">ప్రయోజనాలు</span></h4>
+                                <p class="lang-en">Peace of mind, removal of obstacles, and positive energy</p>
+                                <p class="lang-te">మనస్సు శాంతి, అడ్డంకుల తొలగింపు మరియు సానుకూల శక్తి</p>
+                            </div>
+                            <div class="detail-card">
+                                <h4><span class="detail-icon">⏱️</span> <span class="lang-en">Duration</span><span class="lang-te">కాలపరిమితి</span></h4>
+                                <p class="lang-en">1-2 hours</p>
+                                <p class="lang-te">1-2 గంటలు</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h3 class="modal-title lang-en">Book a Pooja Service</h3>
+            <h3 class="modal-title lang-te">పూజ సేవను బుక్ చేయండి</h3>
+            
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="serviceName" class="lang-en">Selected Service</label>
+                    <label for="serviceName" class="lang-te">ఎంచుకున్న సేవ</label>
+                    <input type="text" id="serviceName" class="form-control" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="customerName" class="lang-en">Your Name</label>
+                    <label for="customerName" class="lang-te">మీ పేరు</label>
+                    <input type="text" id="customerName" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="customerPhone" class="lang-en">Phone Number</label>
+                    <label for="customerPhone" class="lang-te">ఫోన్ నంబర్</label>
+                    <input type="tel" id="customerPhone" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="preferredDate" class="lang-en">Preferred Date</label>
+                    <label for="preferredDate" class="lang-te">ఇష్టపడిన తేదీ</label>
+                    <input type="date" id="preferredDate" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="additionalInfo" class="lang-en">Additional Information</label>
+                    <label for="additionalInfo" class="lang-te">అదనపు సమాచారం</label>
+                    <textarea id="additionalInfo" class="form-control" placeholder="Any specific requirements or questions"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">
+                    <span class="lang-en">Submit Booking Request</span>
+                    <span class="lang-te">బుకింగ్ అభ్యర్థనను సమర్పించండి</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="lang-en">Pandit Services</h3>
+                    <h3 class="lang-te">పండిత్ సేవలు</h3>
+                    <p class="lang-en">Traditional Vedic rituals and ceremonies with 20+ years of experience</p>
+                    <p class="lang-te">20+ సంవత్సరాల అనుభవంతో సంప్రదాయ వేదిక ఆచారాలు మరియు వేడుకలు</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="lang-en">Contact Info</h3>
+                    <h3 class="lang-te">సంప్రదింపు సమాచారం</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span>📞</span>
+                            <span><strong>98483 15831</strong></span>
+                        </div>
+                        <div class="contact-item">
+                            <span>📍</span>
+                            <span class="lang-en">Andhra Pradesh, India</span>
+                            <span class="lang-te">ఆంధ్రప్రదేశ్, భారతదేశం</span>
+                        </div>
+                        <div class="contact-item">
+                            <span>🕒</span>
+                            <span class="lang-en">7:00 AM - 9:00 PM</span>
+                            <span class="lang-te">ఉదయం 7:00 - రాత్రి 9:00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="lang-en">Quick Links</h3>
+                    <h3 class="lang-te">త్వరిత లింకులు</h3>
+                    <p><a href="index.html" style="color: white; text-decoration: none;">
+                        <span class="lang-en">Home</span>
+                        <span class="lang-te">హోమ్</span>
+                    </a></p>
+                    <p><a href="about.html" style="color: white; text-decoration: none;">
+                        <span class="lang-en">About</span>
+                        <span class="lang-te">గురించి</span>
+                    </a></p>
+                    <p><a href="contact.html" style="color: white; text-decoration: none;">
+                        <span class="lang-en">Contact</span>
+                        <span class="lang-te">సంప్రదించండి</span>
+                    </a></p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p class="lang-en">© 2023 Pandit Services. All rights reserved.</p>
+                <p class="lang-te">© 2023 పండిత్ సేవలు. అన్ని హక్కులు రక్షించబడినవి.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language toggle functionality
+        document.getElementById('languageToggle').addEventListener('click', function() {
+            document.body.classList.toggle('telugu');
+            
+            // Update button text
+            if (document.body.classList.contains('telugu')) {
+                this.innerHTML = 'English';
+            } else {
+                this.innerHTML = 'తెలుగు';
+            }
+        });
+
+        // Booking modal functionality
+        const modal = document.getElementById('bookingModal');
+        const bookButtons = document.querySelectorAll('.book-button');
+        const closeModal = document.getElementById('closeModal');
+        const serviceNameInput = document.getElementById('serviceName');
+        const bookingForm = document.getElementById('bookingForm');
+
+        // Open modal when book button is clicked
+        bookButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const serviceName = this.getAttribute('data-service');
+                serviceNameInput.value = serviceName;
+                modal.style.display = 'flex';
+            });
+        });
+
+        // Close modal when X is clicked
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Form submission
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const serviceName = serviceNameInput.value;
+            const customerName = document.getElementById('customerName').value;
+            const customerPhone = document.getElementById('customerPhone').value;
+            const preferredDate = document.getElementById('preferredDate').value;
+            const additionalInfo = document.getElementById('additionalInfo').value;
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Hello, I would like to book a service:\n\nService: ${serviceName}\nName: ${customerName}\nPhone: ${customerPhone}\nPreferred Date: ${preferredDate}\nAdditional Info: ${additionalInfo}`;
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Create WhatsApp URL
+            const whatsappURL = `https://wa.me/919848315831?text=${encodedMessage}`;
+            
+            // Open WhatsApp
+            window.open(whatsappURL, '_blank');
+            
+            // Reset form and close modal
+            bookingForm.reset();
+            modal.style.display = 'none';
+            
+            // Show confirmation
+            if (document.body.classList.contains('telugu')) {
+                alert('మీ అభ్యర్థన సమర్పించబడింది! మేము త్వరలో మిమ్మల్ని సంప్రదిస్తాము.');
+            } else {
+                alert('Your request has been submitted! We will contact you shortly.');
+            }
+        });
+    </script>
+</body>
+</html>
