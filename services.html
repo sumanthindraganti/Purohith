@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<style>    /* Base Styles - Updated with Homepage Variables */
+<style>
+    /* Base Styles - Updated with Homepage Variables */
 :root {
     --bg-color: #fff8e1;
     --text-color: #5d4037;
@@ -34,6 +35,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+    transition: overflow 0.3s ease;
 }
 
 .container {
@@ -42,14 +44,14 @@ body {
     padding: 0 20px;
 }
 
-/* Header Styles - Updated with Homepage Animations */
+/* Header Styles - IMPROVED MOBILE NAVBAR */
 header {
     background: linear-gradient(135deg, var(--vibrant-orange), var(--vibrant-red));
     color: white;
-    padding: 1rem 0;
+    padding: 0;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     box-shadow: 0 2px 15px rgba(0,0,0,0.2);
     animation: headerSlideDown 0.8s ease-out;
 }
@@ -63,39 +65,40 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 70px;
     position: relative;
 }
 
 .logo {
     display: flex;
     align-items: center;
+    gap: 10px;
+    flex: 1;
 }
 
 .logo h1 {
-    font-size: 1.5rem;
-    margin-left: 10px;
+    font-size: 1.4rem;
+    white-space: nowrap;
 }
 
 .logo-icon {
-    font-size: 2rem;
+    font-size: 1.8rem;
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
 }
 
-nav ul {
+/* Desktop Navigation */
+.desktop-nav ul {
     display: flex;
     list-style: none;
+    gap: 1.5rem;
 }
 
-nav li {
-    margin-left: 1.5rem;
-}
-
-nav a {
+.desktop-nav a {
     color: white;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s;
-    padding: 5px 10px;
+    padding: 8px 12px;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -104,7 +107,7 @@ nav a {
     overflow: hidden;
 }
 
-nav a::before {
+.desktop-nav a::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -115,11 +118,11 @@ nav a::before {
     transition: width 0.3s ease;
 }
 
-nav a:hover::before {
+.desktop-nav a:hover::before {
     width: 100%;
 }
 
-nav a:hover {
+.desktop-nav a:hover {
     color: var(--vibrant-yellow);
 }
 
@@ -138,18 +141,20 @@ nav a:hover {
     background-color: var(--vibrant-yellow);
 }
 
-/* Enhanced Language Toggle with Shimmer Effect */
+/* Language Toggle */
 .language-toggle {
-    margin-left: 20px;
     background: transparent;
     border: 1px solid white;
     color: white;
-    padding: 5px 10px;
+    padding: 6px 12px;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s;
     position: relative;
     overflow: hidden;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    white-space: nowrap;
 }
 
 .language-toggle::before {
@@ -171,93 +176,161 @@ nav a:hover {
     background-color: rgba(255,255,255,0.1);
 }
 
-/* Mobile Menu Styles */
+/* Mobile Menu Button */
 .mobile-menu {
     display: none;
-    font-size: 1.5rem;
+    width: 44px;
+    height: 44px;
     cursor: pointer;
-    z-index: 101;
+    z-index: 1001;
+    color: white;
+    font-size: 1.4rem;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    margin-left: 10px;
 }
 
 /* Mobile Navigation Styles */
 @media (max-width: 768px) {
     .header-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        flex-wrap: wrap;
         padding: 0.5rem 0;
-        position: relative;
+        min-height: 60px;
     }
     
     .logo {
-        width: auto;
-        justify-content: flex-start;
-        padding-bottom: 0;
+        order: 1;
+        flex: 1;
+        padding-left: 10px;
     }
     
     .logo h1 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        max-width: 180px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .logo-icon {
+        font-size: 1.5rem;
     }
     
     .mobile-menu {
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
-        font-size: 1.3rem;
+        display: flex;
+        order: 3;
+        margin-left: auto;
     }
     
+    .language-toggle {
+        order: 2;
+        margin-left: 0;
+        padding: 5px 10px;
+        font-size: 0.85rem;
+    }
+    
+    /* Hide desktop nav by default on mobile */
     nav.desktop-nav {
         display: none;
+        width: 100%;
+        order: 4;
     }
     
+    /* Mobile menu active state */
     nav.desktop-nav.mobile-active {
         display: block;
-        width: 100%;
-        margin-top: 1rem;
-        background: linear-gradient(135deg, var(--vibrant-orange), var(--vibrant-red));
         position: absolute;
         top: 100%;
         left: 0;
-        z-index: 99;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        animation: mobileMenuSlideDown 0.3s ease-out;
+        width: 100%;
+        background: linear-gradient(135deg, var(--vibrant-orange), var(--vibrant-red));
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        z-index: 999;
+        animation: slideDown 0.3s ease-out;
+        border-top: 1px solid rgba(255,255,255,0.1);
     }
     
-    @keyframes mobileMenuSlideDown {
-        0% { transform: translateY(-20px); opacity: 0; }
-        100% { transform: translateY(0); opacity: 1; }
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
     
     nav.desktop-nav.mobile-active ul {
+        display: flex;
         flex-direction: column;
-        gap: 0.5rem;
-        padding: 1rem 0;
+        gap: 0;
+        padding: 0;
+        margin: 0;
     }
     
     nav.desktop-nav.mobile-active li {
         margin: 0;
         width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    nav.desktop-nav.mobile-active li:last-child {
+        border-bottom: none;
     }
     
     nav.desktop-nav.mobile-active a {
-        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        text-align: left;
         border-radius: 0;
+        justify-content: flex-start;
+        gap: 12px;
+        transition: all 0.3s ease;
         flex-direction: row;
-        justify-content: center;
-        gap: 10px;
     }
     
     nav.desktop-nav.mobile-active a:hover {
+        background-color: rgba(255, 202, 40, 0.15);
+        padding-left: 25px;
+    }
+    
+    .nav-active::after {
+        display: none;
+    }
+    
+    .nav-active {
         background-color: rgba(255, 202, 40, 0.1);
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1rem;
+        max-width: 150px;
+    }
+    
+    .logo-icon {
+        font-size: 1.3rem;
     }
     
     .language-toggle {
-        margin: 1rem 0 0 0;
-        order: 3;
-        width: 100px;
-        align-self: center;
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+    
+    .mobile-menu {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    nav.desktop-nav.mobile-active a {
+        padding: 12px 15px;
+        font-size: 0.95rem;
     }
 }
 
@@ -1065,6 +1138,11 @@ body.telugu .lang-te {
         animation: mobileMenuSlideDown 0.3s ease-out;
     }
     
+    @keyframes mobileMenuSlideDown {
+        0% { transform: translateY(-20px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+    }
+    
     nav.desktop-nav.mobile-active ul {
         flex-direction: column;
         gap: 0.5rem;
@@ -1196,6 +1274,17 @@ body.telugu .lang-te {
                 <h1 class="lang-te">పండిత్ సేవలు</h1>
             </div>
             
+            <button class="language-toggle" id="languageToggle">
+                <span class="lang-en">తెలుగు</span>
+                <span class="lang-te">English</span>
+            </button>
+            
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <!-- Navigation -->
             <nav class="desktop-nav">
                 <ul>
                     <li><a href="index.html">
@@ -1216,16 +1305,6 @@ body.telugu .lang-te {
                     </a></li>
                 </ul>
             </nav>
-            
-            <button class="language-toggle" id="languageToggle">
-                <span class="lang-en">తెలుగు</span>
-                <span class="lang-te">English</span>
-            </button>
-            
-            <!-- Mobile Menu Button -->
-            <div class="mobile-menu" id="mobileMenu">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </header>
 
@@ -1756,26 +1835,40 @@ body.telugu .lang-te {
     </a>
 
     <script>
-        // Mobile Menu Functionality
+        // IMPROVED MOBILE NAVBAR FUNCTIONALITY FOR SERVICES PAGE
         document.addEventListener('DOMContentLoaded', function() {
+            const languageToggle = document.getElementById('languageToggle');
             const mobileMenu = document.getElementById('mobileMenu');
             const desktopNav = document.querySelector('.desktop-nav');
             const navLinks = document.querySelectorAll('nav a');
-            const languageToggle = document.getElementById('languageToggle');
+            const body = document.body;
+            
+            // Language Toggle
+            languageToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isTelugu = body.classList.toggle('telugu');
+                languageToggle.innerHTML = isTelugu ? 'English' : 'తెలుగు';
+            });
             
             // Mobile Menu Toggle
-            if (mobileMenu) {
-                mobileMenu.addEventListener('click', () => {
-                    desktopNav.classList.toggle('mobile-active');
-                    mobileMenu.innerHTML = desktopNav.classList.contains('mobile-active') 
-                        ? '<i class="fas fa-times"></i>' 
-                        : '<i class="fas fa-bars"></i>';
-                });
-            }
+            mobileMenu.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isActive = desktopNav.classList.toggle('mobile-active');
+                mobileMenu.innerHTML = isActive 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+                
+                // Toggle body scroll when menu is open
+                if (isActive) {
+                    body.style.overflow = 'hidden';
+                } else {
+                    body.style.overflow = '';
+                }
+            });
             
-            // Close mobile menu when clicking a link
+            // Navbar active state and menu closing
             navLinks.forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function(e) {
                     // Remove active class from all links
                     navLinks.forEach(l => l.classList.remove('nav-active'));
                     // Add active class to clicked link
@@ -1784,9 +1877,8 @@ body.telugu .lang-te {
                     // Close mobile menu on link click
                     if (window.innerWidth <= 768 && desktopNav.classList.contains('mobile-active')) {
                         desktopNav.classList.remove('mobile-active');
-                        if (mobileMenu) {
-                            mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
-                        }
+                        mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
+                        body.style.overflow = '';
                     }
                 });
             });
@@ -1796,35 +1888,56 @@ body.telugu .lang-te {
                 if (window.innerWidth <= 768 && 
                     desktopNav.classList.contains('mobile-active') &&
                     !desktopNav.contains(e.target) && 
-                    e.target !== mobileMenu && 
                     !mobileMenu.contains(e.target)) {
                     
                     desktopNav.classList.remove('mobile-active');
-                    if (mobileMenu) {
-                        mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
-                    }
+                    mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
+                    body.style.overflow = '';
                 }
             });
             
-            // Language Toggle
-            if (languageToggle) {
-                languageToggle.addEventListener('click', () => {
-                    const isTelugu = document.body.classList.toggle('telugu');
-                    
-                    // Update button text
-                    languageToggle.innerHTML = isTelugu ? 'English' : 'తెలుగు';
+            // Close mobile menu on scroll
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                if (window.innerWidth <= 768 && desktopNav.classList.contains('mobile-active')) {
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => {
+                        desktopNav.classList.remove('mobile-active');
+                        mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
+                        body.style.overflow = '';
+                    }, 100);
+                }
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768 && desktopNav.classList.contains('mobile-active')) {
+                    desktopNav.classList.remove('mobile-active');
+                    mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
+                    body.style.overflow = '';
+                }
+            });
+            
+            // Set active link based on current page
+            function setActiveLink() {
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === 'services.html' || href === '#') {
+                        if (currentPage === 'services.html' || currentPage === 'services') {
+                            link.classList.add('nav-active');
+                        } else {
+                            link.classList.remove('nav-active');
+                        }
+                    } else if (href && href.includes(currentPage.replace('.html', ''))) {
+                        link.classList.add('nav-active');
+                    } else {
+                        link.classList.remove('nav-active');
+                    }
                 });
             }
             
-            // Handle window resize
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768 && desktopNav.classList.contains('mobile-active')) {
-                    desktopNav.classList.remove('mobile-active');
-                    if (mobileMenu) {
-                        mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
-                    }
-                }
-            });
+            setActiveLink();
             
             // Contact Modal Functionality
             const modal = document.getElementById('contactModal');
@@ -1867,6 +1980,14 @@ body.telugu .lang-te {
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape' && modal.classList.contains('active')) {
                     closeModalFunc();
+                }
+            });
+            
+            // Fixed WhatsApp link in the modal
+            const modalWhatsAppLinks = document.querySelectorAll('.contact-option[href*="wa.me"]');
+            modalWhatsAppLinks.forEach(link => {
+                if (link.href.includes('z')) {
+                    link.href = link.href.replace('z', '');
                 }
             });
         });
